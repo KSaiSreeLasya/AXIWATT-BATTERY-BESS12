@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AxiWatt Medical Tech — Clinical Healthcare Battery Solutions</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Plus Jakarta Sans Font -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-background": "#131b2e",
+            "surface": "#faf8ff",
+            "outline-variant": "#bbcabd",
+            "primary": "#006d40",
+            "surface-container-highest": "#dae2fd",
+            "inverse-primary": "#4ce093",
+            "on-error-container": "#93000a",
+            "error-container": "#ffdad6",
+            "secondary-container": "#82f5c1",
+            "outline": "#6c7b6f",
+            "tertiary-fixed": "#ffdad9",
+            "primary-container": "#00b870",
+            "surface-container": "#eaedff",
+            "secondary-fixed": "#85f8c4",
+            "surface-variant": "#dae2fd",
+            "on-tertiary-container": "#72091a",
+            "on-secondary-fixed": "#002114",
+            "on-primary": "#ffffff",
+            "on-primary-fixed-variant": "#00522f",
+            "on-primary-fixed": "#002110",
+            "surface-tint": "#006d40",
+            "error": "#ba1a1a",
+            "secondary": "#006c4a",
+            "on-primary-container": "#004124",
+            "on-surface-variant": "#3d4a40",
+            "on-tertiary-fixed": "#400009",
+            "secondary-fixed-dim": "#68dba9",
+            "on-secondary-container": "#00714e",
+            "on-tertiary": "#ffffff",
+            "surface-container-low": "#f2f3ff",
+            "inverse-surface": "#283044",
+            "on-error": "#ffffff",
+            "tertiary": "#a9353d",
+            "inverse-on-surface": "#eef0ff",
+            "tertiary-container": "#ff757a",
+            "on-secondary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed-variant": "#881c28",
+            "surface-dim": "#d2d9f4",
+            "on-secondary-fixed-variant": "#005137",
+            "primary-fixed-dim": "#4ce093",
+            "background": "#faf8ff",
+            "on-surface": "#131b2e",
+            "surface-container-high": "#e2e7ff",
+            "surface-bright": "#faf8ff",
+            "primary-fixed": "#6dfdad",
+            "tertiary-fixed-dim": "#ffb3b3"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "margin": "2.5rem",
+            "space-md": "1rem",
+            "gutter-mobile": "1rem",
+            "space-xl": "2.5rem",
+            "margin-mobile": "1.25rem"
+          },
+          "fontFamily": {
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "label-caps": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "display-hero": ["Plus Jakarta Sans"],
+            "display-hero-mobile": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "display-hero-mobile": ["38px", { "lineHeight": "46px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    @keyframes pulse-subtle {
+      0%, 100% { opacity: 0.95; transform: scale(1); }
+      50% { opacity: 0.65; transform: scale(1.02); }
+    }
+    .animate-gentle-pulse {
+      animation: pulse-subtle 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    .clinical-shadow {
+      box-shadow: 0 4px 24px -2px rgba(19, 27, 46, 0.04);
+    }
+    .clinical-shadow-hover {
+      box-shadow: 0 16px 36px -4px rgba(19, 27, 46, 0.08);
+    }
+  </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface antialiased min-h-screen selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation (Shared Component from JSON) -->
+<header class="bg-surface-container-lowest dark:bg-inverse-surface border-b border-surface-container-high dark:border-outline-variant shadow-sm dark:shadow-none docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-gutter max-w-7xl mx-auto h-20">
+<!-- Brand Logo / Product Name -->
+<a class="flex items-center gap-3" href="#">
+<img alt="AxiWatt Logo" class="h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UzSmDBXT-9FWhxI9pwoWILr9ZUJ5cMBxv8kzYluAODdO_IPkczvLCHVomun-FpEKkRJ9YyX2MFGqskaEvI5GfXP4J_pKHaxiRPcqnh_GsEMlGwpWgkm7kEGAOr9DmMjo5ciUXVF7-e7QA04dEiljvUcE62QKD32zwzfeh4bFM_JHf7PSy_63lYBmamuVPzG2ne7P7j5SslcI_Gz_e8sWnDkOjrCLvRx7lwZfMmU4k8Ye8pCo7dOSBcH7NT"/>
+<span class="text-headline-sm font-headline-sm text-on-surface dark:text-inverse-on-surface tracking-tight font-bold">AxiWatt</span>
+</a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant dark:text-surface-variant transition-colors hover:text-primary dark:hover:text-inverse-primary text-label-lg font-label-lg" href="#">
+          EV Mobility
+        </a>
+<a class="text-on-surface-variant dark:text-surface-variant transition-colors hover:text-primary dark:hover:text-inverse-primary text-label-lg font-label-lg" href="#">
+          Consumer
+        </a>
+<!-- Active link: Medical Tech -->
+<a class="text-primary dark:text-inverse-primary border-b-2 border-primary dark:border-inverse-primary pb-1 text-label-lg font-label-lg font-bold" href="#">
+          Medical Tech
+        </a>
+<a class="text-on-surface-variant dark:text-surface-variant transition-colors hover:text-primary dark:hover:text-inverse-primary text-label-lg font-label-lg" href="#">
+          Sustainability
+        </a>
+</nav>
+<!-- Trailing Primary Action -->
+<div class="flex items-center gap-4">
+<a class="bg-primary-container text-on-primary hover:bg-primary transition-colors duration-150 ease-in-out px-6 py-2.5 rounded-lg text-label-lg font-label-lg shadow-sm font-semibold flex items-center gap-2" href="#inquiry">
+<span>Partner with Us</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="w-full overflow-hidden">
+<!-- Hero Section -->
+<section class="relative pt-12 pb-20 md:py-24 bg-gradient-to-b from-surface via-surface-container-lowest to-surface-container-lowest border-b border-surface-container-high/60">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Text Narrative Column -->
+<div class="lg:col-span-6 space-y-6">
+<!-- Medical Assurance Badge -->
+<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-secondary-container/30 border border-primary-container/20 text-on-primary-container text-label-md font-label-md">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span class="w-2 h-2 rounded-full bg-primary-container -ml-4"></span>
+<span class="font-bold tracking-wide">CLINICAL PRECISION GRADE</span>
+<span class="text-outline-variant">•</span>
+<span>ISO 13485 &amp; IEC 60601-1</span>
+</div>
+<h1 class="text-display-hero-mobile md:text-display-hero font-display-hero-mobile md:font-display-hero text-on-surface tracking-tight leading-tight">
+              Unwavering Power for Critical Care When Every Second Matters.
+            </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-xl">
+              Certified medical-grade battery modules engineered for surgical equipment, mobile clinical carts, portable ventilators, and patient monitors.
+            </p>
+<!-- Reassurance Specs Strip -->
+<div class="pt-2 flex flex-wrap gap-4 text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2 bg-surface-container-lowest px-3 py-1.5 rounded-lg border border-surface-container-high shadow-sm">
+<span class="material-symbols-outlined text-primary text-lg">verified_user</span>
+<span class="font-semibold text-on-surface">99.9999% Fault Immunity</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-lowest px-3 py-1.5 rounded-lg border border-surface-container-high shadow-sm">
+<span class="material-symbols-outlined text-primary text-lg">chevron_forward</span>
+<span class="font-semibold text-on-surface">Hot-Swappable Seamless</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-lowest px-3 py-1.5 rounded-lg border border-surface-container-high shadow-sm">
+<span class="material-symbols-outlined text-primary text-lg">brand_awareness</span>
+<span class="font-semibold text-on-surface">Zero Thermal Drift</span>
+</div>
+</div>
+<!-- CTA Buttons -->
+<div class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+<a class="h-12 px-6 rounded-lg bg-primary-container text-on-primary font-label-lg font-label-lg font-semibold shadow-sm hover:bg-primary transition-all flex items-center justify-center gap-2" href="#inquiry">
+<span class="material-symbols-outlined text-lg">local_hospital</span>
+<span>Clinical Partnership Inquiry</span>
+</a>
+<a class="h-12 px-6 rounded-lg bg-surface-container-lowest text-on-surface border border-surface-container-high hover:bg-surface transition-all flex items-center justify-center font-label-lg font-label-lg font-semibold text-on-surface shadow-sm gap-2" href="#specs">
+<span class="material-symbols-outlined text-lg">description</span>
+<span>Request Medical Spec Sheet</span>
+</a>
+</div>
+</div>
+<!-- Visual Column with Attached Reassurance Hero Image -->
+<div class="lg:col-span-6 relative">
+<div class="relative rounded-2xl p-2 bg-surface-container-lowest clinical-shadow border border-surface-container-high">
+<!-- Soft Aura Glow behind frame -->
+<div class="absolute -inset-2 bg-gradient-to-tr from-secondary-container/40 to-primary-container/10 rounded-2xl blur-xl -z-10 animate-gentle-pulse"></div>
+<!-- Main Hero Clinical Photography Frame -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low aspect-[16/10]">
+<img class="w-full h-full object-cover object-center transform transition duration-700 hover:scale-[1.02]" data-alt="A comforting clinical hospital room setting where a caring nurse in navy scrubs with a stethoscope conducts an ultrasound examination on a resting female patient in bed, with modern mobile medical telemetry workstations and high-tech patient monitors quietly operating beside them. High-key natural window light floods the pristine white room with soft emerald accents, conveying compassionate medical expertise, advanced technology, and peaceful safety." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgpPBFR3-mljjY4UX0lJ9t4WcyqfBRo8jX2oDkPYwlv9BP58hWQ7kl4LjYH4afQeiN8-rMrr0VK0wJPHpCLzvVR7c9PrX9goVYhnHmaXZF82nh4r7Le4DypcsXdKtEs6-m7oRV1FyhwrACuz-S5S7Mz-Z8QgtA_O7HvEnTVbcJnObOOwcJ-oGtAootuV78mFO6J0VePX1wQrUONS7a1ygSsZSZ5mMH4X5s2sGmk0nSxLmK9mRuIjPYww"/>
+<!-- Floating Safety Reassurance Badge Overlay -->
+<div class="absolute bottom-4 left-4 right-4 bg-surface-container-lowest/95 backdrop-blur-md p-4 rounded-xl border border-surface-container-high shadow-lg flex items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-secondary-container/40 flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-2xl">medical_services</span>
+</div>
+<div>
+<div class="text-label-caps font-label-caps text-primary tracking-wider uppercase">IEC 60601-1 &amp; ISO 13485 CERTIFIED</div>
+<div class="text-label-lg font-label-lg font-bold text-on-surface">Unbroken Power Assurance in Active Patient Care</div>
+</div>
+</div>
+<div class="hidden sm:flex items-center gap-2 pr-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-pulse"></span>
+<span class="text-label-md font-label-md text-primary font-bold">ACTIVE REGULATION</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Advantages: How It Works in Hospital & Home Care -->
+<section class="py-20 bg-surface-container-lowest" id="specs">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+<div class="inline-flex items-center gap-2 text-label-caps font-label-caps text-primary uppercase tracking-widest font-bold">
+<span class="material-symbols-outlined text-base">vital_signs</span>
+<span>Zero-Compromise Patient Safety Architecture</span>
+</div>
+<h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-on-surface">
+            Designed for the Reality of High-Pressure Clinical Workflows
+          </h2>
+<p class="text-body-md font-body-md text-on-surface-variant">
+            Engineered alongside biomedical technicians and intensive care nurses to eliminate anxiety, noise, and power interruptions in sterile care environments.
+          </p>
+</div>
+<!-- 4 Reassuring Bento Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Feature 1: Hot-Swappable -->
+<div class="p-8 rounded-2xl bg-surface-bright border border-surface-container-high hover:border-primary-container/40 clinical-shadow transition-all duration-300 flex flex-col justify-between group">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-xl bg-secondary-container/30 text-primary flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">autorenew</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">
+                Hot-Swappable Without Power Interruption
+              </h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                Zero reboot or data loss when swapping packs while life-support monitors and diagnostic sensors remain fully active.
+              </p>
+</div>
+<div class="pt-6 mt-6 border-t border-surface-container-high/60 flex items-center justify-between text-body-sm font-body-sm text-primary font-semibold">
+<span>0.0 ms Latency Transfer</span>
+<span class="material-symbols-outlined text-base">check_circle</span>
+</div>
+</div>
+<!-- Feature 2: Whisper-Quiet & Non-Heating -->
+<div class="p-8 rounded-2xl bg-surface-bright border border-surface-container-high hover:border-primary-container/40 clinical-shadow transition-all duration-300 flex flex-col justify-between group">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-xl bg-secondary-container/30 text-primary flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">volume_off</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">
+                Whisper-Quiet &amp; Non-Heating
+              </h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                Fanless passive heat dissipation ensures a calm, acoustic-sterile environment vital for resting and recovering patients.
+              </p>
+</div>
+<div class="pt-6 mt-6 border-t border-surface-container-high/60 flex items-center justify-between text-body-sm font-body-sm text-primary font-semibold">
+<span>&lt; 18 dB Acoustic Footprint</span>
+<span class="material-symbols-outlined text-base">check_circle</span>
+</div>
+</div>
+<!-- Feature 3: Biocompatible Enclosures -->
+<div class="p-8 rounded-2xl bg-surface-bright border border-surface-container-high hover:border-primary-container/40 clinical-shadow transition-all duration-300 flex flex-col justify-between group">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-xl bg-secondary-container/30 text-primary flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">sanitizer</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">
+                Biocompatible Flame-Retardant Enclosures
+              </h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                Medical-grade polymers resistant to harsh hospital chemical disinfectants, UV-C sterilizers, and quaternary spray wipe downs.
+              </p>
+</div>
+<div class="pt-6 mt-6 border-t border-surface-container-high/60 flex items-center justify-between text-body-sm font-body-sm text-primary font-semibold">
+<span>UL 94 V-0 Certified Resin</span>
+<span class="material-symbols-outlined text-base">check_circle</span>
+</div>
+</div>
+<!-- Feature 4: Predictive OLED Indication -->
+<div class="p-8 rounded-2xl bg-surface-bright border border-surface-container-high hover:border-primary-container/40 clinical-shadow transition-all duration-300 flex flex-col justify-between group">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-xl bg-secondary-container/30 text-primary flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">monitoring</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">
+                Predictive Intelligent Charge Indication
+              </h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                Unambiguous high-contrast percentage displays and haptic alerts give nursing and transport staff intuitive, mistake-free confidence.
+              </p>
+</div>
+<div class="pt-6 mt-6 border-t border-surface-container-high/60 flex items-center justify-between text-body-sm font-body-sm text-primary font-semibold">
+<span>Dynamic Runtime Calc</span>
+<span class="material-symbols-outlined text-base">check_circle</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Interactive Clinical Scenarios -->
+<section class="py-20 bg-surface border-y border-surface-container-high/70">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+<div class="max-w-2xl space-y-2">
+<span class="text-label-caps font-label-caps text-primary uppercase font-bold tracking-wider">Operational Deployments</span>
+<h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-on-surface">
+              Tailored Deployments Across the Healthcare Continuum
+            </h2>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-md">
+            Continuous certified reliability across emergency transport, clinical wards, and outpatient home respiratory support.
+          </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Scenario 1: Intensive Care & Patient Monitors -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden border border-surface-container-high clinical-shadow flex flex-col group hover:shadow-lg transition-all">
+<div class="p-6 pb-0">
+<div class="relative rounded-xl overflow-hidden aspect-[4/3] bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition duration-500" data-alt="An advanced intensive care unit setup featuring high-resolution bedside vital signs monitors and infusion pumps in a bright, spotless modern hospital room. The pristine light-mode medical aesthetic incorporates clear digital telemetry screens and subtle emerald indicators, expressing serene precision and high-reliability clinical monitoring without visual clutter." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjJRq5tXRhM5pv-LesPRRVCs0c6szJeKfhPz356yb0ENPfmjbWkFufu8SG0zUZT5vuZQBIVVZmSswpj1s-gQOQizGKx3Y7yPMwwIKBiPFci85NJngStuTylPXvqN2a5FBc2z_72ONnKideF3PBSpp3GhsoHlRJDDnKQdYSBmB6JFMJqYu7Xn6c-cRbTioPhuqLhka34FShcnyJ8aAbPTJPJS7RkWUJDGf2n90j9WKCFylyb0rMexKECw"/>
+<div class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-3 py-1 rounded-full text-label-md font-label-md font-bold text-on-surface flex items-center gap-1.5 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                  Scenario 01
+                </div>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div class="space-y-3">
+<h3 class="text-headline-sm font-headline-sm text-on-surface">
+                  Intensive Care &amp; Patient Monitors
+                </h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                  Uninterrupted mobile bedside telemetry during critical ward transfers, MRI transport, and post-operative recovery rooms.
+                </p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container-high/60 space-y-2">
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Continuous Runtime:</span>
+<span class="font-bold text-on-surface">Up to 28 Hours</span>
+</div>
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Failover Architecture:</span>
+<span class="font-bold text-primary">Redundant Dual Cell</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Scenario 2: Portable Ultrasound & Diagnostic Carts -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden border border-surface-container-high clinical-shadow flex flex-col group hover:shadow-lg transition-all">
+<div class="p-6 pb-0">
+<div class="relative rounded-xl overflow-hidden aspect-[4/3] bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition duration-500" data-alt="A modern wheeled mobile medical diagnostic cart equipped with a portable ultrasound console and medical tablet in an organized, brightly lit hospital hallway. Clean neutral clinical white surfaces, pristine medical hardware, and clear glowing green battery power indicators illustrate all-day untethered freedom for visiting physicians and sonographers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPggeZtX20FdLa7QbuVd0Txj9GsjRNTBqMSyd8hnd7dQ7xg_wDvm7t8XQhdV9ERBxJkCBoWyJ78dIs23qi8Dt6TFLd9SXzH9Fs3YWIBptRTp6ipDAeTYKDjdFv_Nmb5SvY6azvbgHglLeOIu-bVaxcATLb54YeQSexVjRTpjdHN5okzb5ol_w8F-jPifv9QQclOFhx9ZoFcfLT__ju5d_GR8YWFDjcACvWBSMvbYNy_lvuXt7yIk0GiA"/>
+<div class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-3 py-1 rounded-full text-label-md font-label-md font-bold text-on-surface flex items-center gap-1.5 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                  Scenario 02
+                </div>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div class="space-y-3">
+<h3 class="text-headline-sm font-headline-sm text-on-surface">
+                  Portable Ultrasound &amp; Diagnostic Carts
+                </h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                  Full 12-hour shift mobility without tethering doctors and sonographers to wall outlets or risking sudden power drops mid-scan.
+                </p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container-high/60 space-y-2">
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Shift Ergonomics:</span>
+<span class="font-bold text-on-surface">Lightweight Quick-Latch</span>
+</div>
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Charge Cycle:</span>
+<span class="font-bold text-primary">80% in 35 Minutes</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Scenario 3: Emergency Ambulances & Home Care -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden border border-surface-container-high clinical-shadow flex flex-col group hover:shadow-lg transition-all">
+<div class="p-6 pb-0">
+<div class="relative rounded-xl overflow-hidden aspect-[4/3] bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition duration-500" data-alt="A rugged compact portable transport ventilator and defibrillator kit deployed inside an emergency ambulance response vehicle with soft warm morning light. High-grade clinical impact-resistant casing, pristine metallic fittings, and bright emerald battery telemetry status readouts highlight life-critical emergency readiness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWQO2pvQUyjJsHq5KwZGEvHBFjxxikzf8XomaJpx3S71Stva3aXW_r7XMMeCjeP8hZubhVPnMifLjGBUG6V9eh3TLSRHIk-ZbDvKfDp8Hvoo8ggvxBM_p60cjj3NdosfNr_4mtdZG-coduiXP4C5ejiwFQ1r8U6b_CbsUymlPOeN9FWqbzRWqJ_Z8-1TGNKlFWtgdTquwWV-XU-3Xnz68obEzqnlPNNAuCuyEgaXBWrOp6LnCOcAtPJQ"/>
+<div class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-3 py-1 rounded-full text-label-md font-label-md font-bold text-on-surface flex items-center gap-1.5 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                  Scenario 03
+                </div>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div class="space-y-3">
+<h3 class="text-headline-sm font-headline-sm text-on-surface">
+                  Emergency Ambulances &amp; Home Care
+                </h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                  Rugged shock-tested batteries keeping portable ventilators, suction pumps, and defibrillators dependable in transit and at home.
+                </p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container-high/60 space-y-2">
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Vibration Rating:</span>
+<span class="font-bold text-on-surface">MIL-STD 810H Shock</span>
+</div>
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Climate Resilience:</span>
+<span class="font-bold text-primary">-20°C to +55°C Stable</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Real-Time Clinical Battery Telemetry Demonstration -->
+<section class="py-20 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="bg-gradient-to-br from-surface to-surface-container-lowest rounded-3xl p-8 md:p-12 border border-surface-container-high clinical-shadow">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-5 space-y-4">
+<div class="inline-flex items-center gap-2 text-label-caps font-label-caps text-primary tracking-widest uppercase">
+<span class="material-symbols-outlined text-base">analytics</span>
+<span>Active Clinical Health State</span>
+</div>
+<h2 class="text-headline-md font-headline-md text-on-surface">
+                Transparent Nursing Telemetry HUD
+              </h2>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                Every AxiWatt clinical pack integrates intelligent microcontroller logic that broadcasts direct state-of-health and remaining minutes directly to station monitors and cart screens.
+              </p>
+<div class="pt-2 space-y-3">
+<div class="flex items-center gap-3 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span>Direct SMBus / I2C medical protocol compliance</span>
+</div>
+<div class="flex items-center gap-3 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span>Independent dual-fuse thermal protection circuitry</span>
+</div>
+<div class="flex items-center gap-3 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span>Automated cycle wear logs for hospital bio-med auditing</span>
+</div>
+</div>
+</div>
+<!-- Interactive HUD Component -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-2xl p-6 md:p-8 border border-surface-container-high shadow-sm">
+<div class="flex items-center justify-between pb-6 border-b border-surface-container-high">
+<div>
+<div class="text-label-caps font-label-caps text-on-surface-variant uppercase">Connected Device Module</div>
+<div class="text-headline-sm font-headline-sm text-on-surface font-bold">Cart 04B — Mobile ICU Ventilator</div>
+</div>
+<div class="px-3 py-1 rounded-full bg-secondary-container/40 text-on-secondary-container text-label-md font-label-md font-bold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+                  OPTIMAL
+                </div>
+</div>
+<!-- Metrics Array -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-6 py-6">
+<div>
+<div class="text-label-caps font-label-caps text-on-surface-variant uppercase">Charge Level</div>
+<div class="text-headline-lg font-headline-lg text-primary font-bold">98.4%</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant mt-1">Est. 14h 22m remaining</div>
+</div>
+<div>
+<div class="text-label-caps font-label-caps text-on-surface-variant uppercase">Core Thermal</div>
+<div class="text-headline-lg font-headline-lg text-on-surface font-bold">28.4°C</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant mt-1">Fanless ambient flow</div>
+</div>
+<div>
+<div class="text-label-caps font-label-caps text-on-surface-variant uppercase">Health Factor</div>
+<div class="text-headline-lg font-headline-lg text-on-surface font-bold">100%</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant mt-1">Cycle 14 of 3,500+</div>
+</div>
+</div>
+<!-- Gauge Bar -->
+<div class="space-y-2 pt-2">
+<div class="flex justify-between text-label-md font-label-md text-on-surface-variant">
+<span>Dynamic Reserve Cushion</span>
+<span class="text-primary font-bold">Safe for Patient Transport</span>
+</div>
+<div class="w-full h-2.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full transition-all duration-1000" style="width: 98%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Direct OEM / Clinical Partner Form Section -->
+<section class="py-20 bg-surface border-t border-surface-container-high/60" id="inquiry">
+<div class="max-w-4xl mx-auto px-gutter">
+<div class="text-center space-y-3 mb-12">
+<div class="inline-flex items-center gap-2 text-label-caps font-label-caps text-primary uppercase font-bold tracking-wider">
+<span class="material-symbols-outlined text-base">handshake</span>
+<span>Healthcare Engineering Consultation</span>
+</div>
+<h2 class="text-headline-lg font-headline-lg text-on-surface">
+            Speak Directly with our Medical Battery OEM Engineers
+          </h2>
+<p class="text-body-md font-body-md text-on-surface-variant">
+            Whether qualifying high-reliability power packs for next-generation ventilators or retrofit hospital cart fleets, our biomedical team responds within 4 business hours.
+          </p>
+</div>
+<form class="bg-surface-container-lowest p-8 md:p-10 rounded-3xl border border-surface-container-high clinical-shadow space-y-6" onsubmit="event.preventDefault(); alert('Inquiry sent successfully to the AxiWatt Clinical Engineering Team.');">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-label-lg font-label-lg text-on-surface font-semibold" for="fullName">Full Name</label>
+<input class="w-full h-12 px-4 rounded-lg bg-surface border border-surface-container-high text-on-surface focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 text-body-md font-body-md transition-all" id="fullName" placeholder="Dr. Sarah Jenkins" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-label-lg font-label-lg text-on-surface font-semibold" for="workEmail">Work / Institutional Email</label>
+<input class="w-full h-12 px-4 rounded-lg bg-surface border border-surface-container-high text-on-surface focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 text-body-md font-body-md transition-all" id="workEmail" placeholder="sjenkins@hospitalhealth.org" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-label-lg font-label-lg text-on-surface font-semibold" for="organization">Hospital / Medical Device OEM</label>
+<input class="w-full h-12 px-4 rounded-lg bg-surface border border-surface-container-high text-on-surface focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 text-body-md font-body-md transition-all" id="organization" placeholder="Advanced Surgical Diagnostics Inc." required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-label-lg font-label-lg text-on-surface font-semibold" for="deviceApplication">Primary Application</label>
+<select class="w-full h-12 px-4 rounded-lg bg-surface border border-surface-container-high text-on-surface focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 text-body-md font-body-md transition-all" id="deviceApplication">
+<option>Mobile Patient Monitors &amp; Telemetry</option>
+<option>Portable Critical Ventilators</option>
+<option>Clinical Ultrasound / Imaging Carts</option>
+<option>Surgical Lighting &amp; Robotic Tools</option>
+<option>Custom OEM Medical Pack Request</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-label-lg font-label-lg text-on-surface font-semibold" for="specDetails">Certification &amp; Specification Notes</label>
+<textarea class="w-full p-4 rounded-lg bg-surface border border-surface-container-high text-on-surface focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 text-body-md font-body-md transition-all" id="specDetails" placeholder="Detail standard compliance requirements (e.g., IEC 60601-1, hot-swap enclosure dimensions, or target cycle life)..." rows="4"></textarea>
+</div>
+<div class="flex items-center gap-3">
+<input class="w-5 h-5 rounded border-outline-variant text-primary-container focus:ring-primary-container" id="ndaConsent" type="checkbox"/>
+<label class="text-body-sm font-body-sm text-on-surface-variant" for="ndaConsent">Request an AxiWatt Standard Medical Mutual Non-Disclosure Agreement (M-NDA)</label>
+</div>
+<div class="pt-2">
+<button class="w-full h-12 rounded-lg bg-primary-container text-on-primary font-label-lg font-label-lg font-bold shadow-md hover:bg-primary transition-all duration-150 flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-xl">send</span>
+<span>Submit Clinical Technical Inquiry</span>
+</button>
+<div class="mt-3 text-center text-body-sm font-body-sm text-outline">
+              Strict compliance confidentiality guaranteed under ISO 13485 design guidelines.
+            </div>
+</div>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component from JSON) -->
+<footer class="bg-surface-container-low dark:bg-inverse-surface border-t border-surface-container-high dark:border-outline-variant flat no shadows docked full-width bottom">
+<div class="w-full px-gutter py-space-xl max-w-7xl mx-auto space-y-8">
+<!-- Top Row: Brand & Mission -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div class="flex items-center gap-3">
+<img alt="AxiWatt Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UzSmDBXT-9FWhxI9pwoWILr9ZUJ5cMBxv8kzYluAODdO_IPkczvLCHVomun-FpEKkRJ9YyX2MFGqskaEvI5GfXP4J_pKHaxiRPcqnh_GsEMlGwpWgkm7kEGAOr9DmMjo5ciUXVF7-e7QA04dEiljvUcE62QKD32zwzfeh4bFM_JHf7PSy_63lYBmamuVPzG2ne7P7j5SslcI_Gz_e8sWnDkOjrCLvRx7lwZfMmU4k8Ye8pCo7dOSBcH7NT"/>
+<span class="text-headline-sm font-headline-sm text-on-surface dark:text-inverse-on-surface font-bold tracking-tight">AxiWatt Systems</span>
+</div>
+<div class="flex flex-wrap gap-6 text-label-caps font-label-caps">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150 ease-in-out" href="#">
+            ISO 26262 Certified
+          </a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150 ease-in-out" href="#">
+            IEC 62133 Compliant
+          </a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150 ease-in-out" href="#">
+            UN 38.3 Verified
+          </a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150 ease-in-out" href="#">
+            Privacy Policy
+          </a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150 ease-in-out" href="#">
+            Environmental Impact
+          </a>
+</div>
+</div>
+<!-- Divider -->
+<div class="w-full h-px bg-surface-container-high dark:border-outline-variant"></div>
+<!-- Bottom Row: Compliance & Copyright -->
+<div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-body-sm font-body-sm text-on-surface-variant dark:text-surface-variant">
+<div>
+          © 2025 AxiWatt Systems Inc. Certified High-Reliability Clean Energy Storage. All rights reserved.
+        </div>
+<div class="flex items-center gap-2 text-primary dark:text-inverse-primary font-semibold">
+<span class="material-symbols-outlined text-base">shield_with_heart</span>
+<span>Dedicated Medical OEM Division</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

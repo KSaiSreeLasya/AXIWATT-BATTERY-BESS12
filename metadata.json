@@ -1,0 +1,6 @@
+{
+  "name": "AxiWatt - Advanced Battery Solutions",
+  "description": "High-reliability battery and energy storage systems for electric mobility, telecom resilience, and clean energy infrastructure.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

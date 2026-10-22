@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AxiWatt — Consumer Products &amp; Lifestyle Smart Battery Solutions</title>
+<!-- Material Symbols & Typography -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-background": "#131b2e",
+            "surface": "#faf8ff",
+            "outline-variant": "#bbcabd",
+            "primary": "#006d40",
+            "surface-container-highest": "#dae2fd",
+            "inverse-primary": "#4ce093",
+            "on-error-container": "#93000a",
+            "error-container": "#ffdad6",
+            "secondary-container": "#82f5c1",
+            "outline": "#6c7b6f",
+            "tertiary-fixed": "#ffdad9",
+            "primary-container": "#00b870",
+            "surface-container": "#eaedff",
+            "secondary-fixed": "#85f8c4",
+            "surface-variant": "#dae2fd",
+            "on-tertiary-container": "#72091a",
+            "on-secondary-fixed": "#002114",
+            "on-primary": "#ffffff",
+            "on-primary-fixed-variant": "#00522f",
+            "on-primary-fixed": "#002110",
+            "surface-tint": "#006d40",
+            "error": "#ba1a1a",
+            "secondary": "#006c4a",
+            "on-primary-container": "#004124",
+            "on-surface-variant": "#3d4a40",
+            "on-tertiary-fixed": "#400009",
+            "secondary-fixed-dim": "#68dba9",
+            "on-secondary-container": "#00714e",
+            "on-tertiary": "#ffffff",
+            "surface-container-low": "#f2f3ff",
+            "inverse-surface": "#283044",
+            "on-error": "#ffffff",
+            "tertiary": "#a9353d",
+            "inverse-on-surface": "#eef0ff",
+            "tertiary-container": "#ff757a",
+            "on-secondary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed-variant": "#881c28",
+            "surface-dim": "#d2d9f4",
+            "on-secondary-fixed-variant": "#005137",
+            "primary-fixed-dim": "#4ce093",
+            "background": "#faf8ff",
+            "on-surface": "#131b2e",
+            "surface-container-high": "#e2e7ff",
+            "surface-bright": "#faf8ff",
+            "primary-fixed": "#6dfdad",
+            "tertiary-fixed-dim": "#ffb3b3"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "margin": "2.5rem",
+            "space-md": "1rem",
+            "gutter-mobile": "1rem",
+            "space-xl": "2.5rem",
+            "margin-mobile": "1.25rem"
+          },
+          "fontFamily": {
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "label-caps": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "display-hero": ["Plus Jakarta Sans"],
+            "display-hero-mobile": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "display-hero-mobile": ["38px", { "lineHeight": "46px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-shadow-soft {
+      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+    }
+    .custom-shadow-elevated {
+      box-shadow: 0 16px 36px -4px rgba(15, 23, 42, 0.07);
+    }
+  </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface antialiased font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation (Shared Components JSON execution) -->
+<header class="bg-surface-container-lowest dark:bg-inverse-surface border-b border-surface-container-high dark:border-outline-variant shadow-sm dark:shadow-none docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-gutter max-w-7xl mx-auto h-20">
+<div class="flex items-center gap-3">
+<img alt="AxiWatt Logo" class="h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UzSmDBXT-9FWhxI9pwoWILr9ZUJ5cMBxv8kzYluAODdO_IPkczvLCHVomun-FpEKkRJ9YyX2MFGqskaEvI5GfXP4J_pKHaxiRPcqnh_GsEMlGwpWgkm7kEGAOr9DmMjo5ciUXVF7-e7QA04dEiljvUcE62QKD32zwzfeh4bFM_JHf7PSy_63lYBmamuVPzG2ne7P7j5SslcI_Gz_e8sWnDkOjrCLvRx7lwZfMmU4k8Ye8pCo7dOSBcH7NT"/>
+<span class="text-headline-sm font-headline-sm text-on-surface dark:text-inverse-on-surface tracking-tight">AxiWatt</span>
+</div>
+<!-- Navigation Links -->
+<nav aria-label="Main Navigation" class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant dark:text-surface-variant transition-colors hover:text-primary dark:hover:text-inverse-primary text-label-lg font-label-lg transition-colors duration-150 ease-in-out" href="#ev-mobility">EV Mobility</a>
+<!-- Active link: Consumer based on current page -->
+<a class="text-primary dark:text-inverse-primary border-b-2 border-primary dark:border-inverse-primary pb-1 text-label-lg font-label-lg transition-colors duration-150 ease-in-out" href="#consumer">Consumer</a>
+<a class="text-on-surface-variant dark:text-surface-variant transition-colors hover:text-primary dark:hover:text-inverse-primary text-label-lg font-label-lg transition-colors duration-150 ease-in-out" href="#medical-tech">Medical Tech</a>
+<a class="text-on-surface-variant dark:text-surface-variant transition-colors hover:text-primary dark:hover:text-inverse-primary text-label-lg font-label-lg transition-colors duration-150 ease-in-out" href="#sustainability">Sustainability</a>
+</nav>
+<!-- Trailing Primary Action -->
+<div class="flex items-center gap-4">
+<a class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-secondary transition-colors duration-150 ease-in-out shadow-sm" href="#contact">
+          Partner with Us
+        </a>
+<button aria-label="Open navigation menu" class="md:hidden text-on-surface p-2" type="button">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden bg-gradient-to-b from-surface-bright to-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="flex flex-col items-center text-center max-w-4xl mx-auto mb-12 md:mb-16">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#ecfdf5] border border-secondary-container text-primary mb-6">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-caps text-label-caps tracking-widest text-[#059669]">NEXT-GEN COMPACT ARCHITECTURE</span>
+</div>
+<h1 class="text-display-hero-mobile md:text-display-hero font-display-hero text-on-background tracking-tight mb-6">
+            Powering the Tools and Tech That Shape Your Daily Life.
+          </h1>
+<p class="text-body-md md:text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto mb-8 text-neutral-600">
+            From lightweight photography drones and handheld smart tools to outdoor portable power stations — long-lasting, ultra-safe compact battery solutions engineered for everyday creators.
+          </p>
+<div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+<a class="w-full sm:w-auto inline-flex items-center justify-center h-12 px-7 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-[#059669] transition-all duration-200 shadow-sm hover:shadow" href="#categories">
+              Discover OEM Battery Packs
+              <span class="material-symbols-outlined ml-2 text-lg">arrow_forward</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center h-12 px-7 rounded-lg bg-[#f1f5f9] text-on-background font-label-lg text-label-lg hover:bg-[#e2e8f0] transition-all duration-200" href="#catalog">
+<span class="material-symbols-outlined mr-2 text-lg">download</span>
+              Download Lifestyle Catalog
+            </a>
+</div>
+</div>
+<!-- Prominent Lifestyle Hero Image Display -->
+<div class="relative rounded-2xl md:rounded-3xl border border-[#f1f5f9] custom-shadow-elevated overflow-hidden group bg-surface-container-lowest">
+<div class="aspect-[16/9] md:aspect-[21/9] w-full overflow-hidden relative">
+<img class="w-full h-full object-cover object-center transform transition-transform duration-700 ease-out group-hover:scale-[1.02]" data-alt="A clean, luminous modern desk bathed in warm morning daylight with a professional drone, handheld camera on a tripod gimbal, compact electronic precision screwdriver set, and an elegant portable power station. The styling is airy, serene, and ultra-clean with pale oak and white surfaces, punctuated by subtle emerald green design cues to reflect high-efficiency clean energy lifestyle products." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuDUvLKkgAP_j6JZagqmzig2gM4aq7Uy69OtBer2NIinwAP1idc5b_oIUirj7Q5lzFMgFII953Kzh50raevyWuNaRVF48u45BbyM7bBt9E9XMiYj5lKpjdVD9mAonfAylFoj13S4BmJbnm0sy6sFusCD3VKmwnkvwtjZX8V0V_GxCVkWzQGVDWaLVa6XVeXKn6-K4pRWnT-qnfPpfQ9Gqkf0QQM8-2sIYlE3DoTVSpkjsdMX0oBTvtIw"/>
+<!-- Soft inner gradient overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none"></div>
+<!-- Floating Badge: Ultra-Compact • 1,200+ Cycle Longevity • Airline Carry-on Approved -->
+<div class="absolute bottom-4 left-4 md:bottom-8 md:left-8 bg-surface-container-lowest/95 backdrop-blur-md px-4 py-3 md:px-6 md:py-3.5 rounded-xl border border-white/60 shadow-lg flex items-center gap-3 md:gap-4 transition-transform group-hover:translate-y-[-2px]">
+<div class="w-8 h-8 rounded-full bg-[#ecfdf5] flex items-center justify-center text-[#059669] flex-shrink-0">
+<span class="material-symbols-outlined text-lg">verified</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center sm:gap-3 text-left">
+<span class="text-body-sm font-label-lg text-on-background">Ultra-Compact</span>
+<span class="hidden sm:inline text-outline-variant">•</span>
+<span class="text-body-sm font-label-lg text-on-background">1,200+ Cycle Longevity</span>
+<span class="hidden sm:inline text-outline-variant">•</span>
+<span class="text-body-sm font-label-lg text-[#059669]">Airline Carry-on Approved</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works in Lifestyle Mode Section -->
+<section class="py-20 md:py-28 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div class="max-w-2xl">
+<span class="text-label-caps font-label-caps text-[#059669] uppercase tracking-wider block mb-2">Everyday Reliability</span>
+<h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-on-background tracking-tight">
+              Engineered for Intuitive Daily Living.
+            </h2>
+<p class="text-body-md font-body-md text-on-surface-variant mt-3">
+              Clean, silent power that simply stays out of your way. No complicated gauges or cumbersome setups — pure battery efficiency built for human hands.
+            </p>
+</div>
+<div class="flex items-center gap-2 text-label-md font-label-md text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-full bg-[#00b870]"></span>
+            Continuous Cell Health Monitoring
+          </div>
+</div>
+<!-- 4 Lifestyle Pillars (Bento Grid) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Pillar 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl border border-[#f1f5f9] custom-shadow-soft hover:custom-shadow-elevated transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-2xl">aspect_ratio</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-background mb-3">Pocket-Sized Density</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                Maximum energy packed into sleek, pocketable form factors that fit seamlessly into compact product enclosures without adding dead weight.
+              </p>
+</div>
+<div class="mt-8 pt-4 border-t border-surface-container-low flex items-center justify-between text-label-md font-label-md text-on-surface-variant">
+<span>Form Factor</span>
+<span class="text-primary font-semibold">Sub-18mm Thin</span>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl border border-[#f1f5f9] custom-shadow-soft hover:custom-shadow-elevated transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-2xl">thermostat</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-background mb-3">Drop-Resistant &amp; Cool-Running</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                Intelligent thermal casing that stays cool to the touch during high-power usage or ultra-fast USB-C PD charging sessions.
+              </p>
+</div>
+<div class="mt-8 pt-4 border-t border-surface-container-low flex items-center justify-between text-label-md font-label-md text-on-surface-variant">
+<span>Thermal Threshold</span>
+<span class="text-primary font-semibold">&lt; 34°C Under Peak</span>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl border border-[#f1f5f9] custom-shadow-soft hover:custom-shadow-elevated transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-2xl">battery_charging_full</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-background mb-3">Zero Phantom Drain</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                Advanced low-discharge BMS keeps devices 95% charged even after 6 months on the shelf or in storage drawers.
+              </p>
+</div>
+<div class="mt-8 pt-4 border-t border-surface-container-low flex items-center justify-between text-label-md font-label-md text-on-surface-variant">
+<span>Shelf Standby</span>
+<span class="text-primary font-semibold">95% @ 180 Days</span>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl border border-[#f1f5f9] custom-shadow-soft hover:custom-shadow-elevated transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-2xl">bolt</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-background mb-3">Universal USB-C Fast Charge</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                Rapid charging directly from everyday standard GaN chargers, solar mats, or vehicle outlets with bi-directional Power Delivery.
+              </p>
+</div>
+<div class="mt-8 pt-4 border-t border-surface-container-low flex items-center justify-between text-label-md font-label-md text-on-surface-variant">
+<span>PD Delivery</span>
+<span class="text-primary font-semibold">Up to 140W In/Out</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Visual Feature: "Power in Every Moment" -->
+<section class="py-20 md:py-28 bg-surface-container-low/60 border-y border-[#f1f5f9]">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="text-center max-w-3xl mx-auto mb-12">
+<span class="text-label-caps font-label-caps text-[#059669] uppercase tracking-wider block mb-2">Interactive Architecture</span>
+<h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-on-background tracking-tight">
+            Power in Every Moment
+          </h2>
+<p class="text-body-md font-body-md text-on-surface-variant mt-3">
+            Explore how the compact AxiWatt micro-cell modules silently adapt to distinct lifestyle demands without requiring separate proprietary power bricks.
+          </p>
+<!-- Tab Selector Buttons -->
+<div class="inline-flex p-1.5 mt-8 bg-surface-container-lowest rounded-xl border border-[#f1f5f9] custom-shadow-soft">
+<button class="px-5 py-2.5 rounded-lg text-label-lg font-label-lg transition-all duration-150 bg-on-background text-surface" id="btn-creative" onclick="switchMoment('creative')">
+              Creative Studio
+            </button>
+<button class="px-5 py-2.5 rounded-lg text-label-lg font-label-lg transition-all duration-150 text-on-surface-variant hover:text-on-background" id="btn-home" onclick="switchMoment('home')">
+              Home &amp; DIY
+            </button>
+<button class="px-5 py-2.5 rounded-lg text-label-lg font-label-lg transition-all duration-150 text-on-surface-variant hover:text-on-background" id="btn-outdoor" onclick="switchMoment('outdoor')">
+              Outdoor Living
+            </button>
+</div>
+</div>
+<!-- Dynamic Container for Active State -->
+<div class="bg-surface-container-lowest rounded-2xl md:rounded-3xl border border-[#f1f5f9] p-6 md:p-12 custom-shadow-soft">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+<!-- Left Info Panel -->
+<div class="lg:col-span-5 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ecfdf5] text-label-md font-label-md text-[#059669]" id="moment-tag">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+<span>DSLRs, Gimbals &amp; Drones</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-background" id="moment-title">
+                Uninterrupted High-Bitrate Creation
+              </h3>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed" id="moment-desc">
+                Cinema gimbals, motorized sliders, and 4K aerial drones demand surge currents with zero voltage ripple. AxiWatt cells provide consistent continuous discharge, keeping creative rigs steady without thermal throttling.
+              </p>
+<!-- Dynamic Specs Matrix -->
+<div class="space-y-4 pt-4 border-t border-[#f1f5f9]">
+<div>
+<div class="flex justify-between text-label-md font-label-md text-on-surface-variant mb-1.5">
+<span id="moment-metric-1-label">Peak Discharge Rate</span>
+<span class="font-bold text-on-background" id="moment-metric-1-val">35C Continuous</span>
+</div>
+<div class="w-full h-1.5 bg-[#f1f5f9] rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full transition-all duration-500" id="moment-bar-1" style="width: 88%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-label-md font-label-md text-on-surface-variant mb-1.5">
+<span id="moment-metric-2-label">Shoot Time Efficiency</span>
+<span class="font-bold text-on-background" id="moment-metric-2-val">+42% Over Standard Li-ion</span>
+</div>
+<div class="w-full h-1.5 bg-[#f1f5f9] rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full transition-all duration-500" id="moment-bar-2" style="width: 94%;"></div>
+</div>
+</div>
+</div>
+<!-- Integration Pill -->
+<div class="p-4 rounded-xl bg-surface-bright border border-[#f1f5f9] flex items-center gap-3">
+<span class="material-symbols-outlined text-[#059669]">check_circle</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant" id="moment-integration">
+                  Fits natively in DJI Ronin, RED V-mount adapters, and custom carbon fiber drone plates.
+                </span>
+</div>
+</div>
+<!-- Right Visual Display Card -->
+<div class="lg:col-span-7">
+<div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-surface-container-low border border-[#f1f5f9] flex items-center justify-center p-8">
+<img class="w-full h-full object-cover rounded-xl transition-all duration-500" data-alt="A clean, minimalist studio scene featuring a cinema mirrorless camera mounted on a sleek 3-axis motorized gimbal on a light wood tabletop, alongside a streamlined carbon-fiber drone. Soft natural window light highlights the elegant matte black hardware and precision emerald green battery indicator light." id="moment-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8ArjhPjNQv14Wckgfjtof_K0PMol4Io3Fix8GFLf42YG4CEDf3g-ZXE66T_ulvkcwGNUEAISsiAKvoiZkv-z845tj8Piicjl1p8REhIW6FSOpc6L64JItwQ6YUUKGdfa0C2PdIdoAjsDBtzCo29C0nw1P5FuzGt_8de-IDpPpFINNUeJjnX4bdTZLQgyub87x4x2gyY-Axy4pOVuCkF2XcfZDPrxxBnN-8JDk1GgtxA2klf8ettRKQg"/>
+<!-- Floating Micro Telemetry Card -->
+<div class="absolute top-6 right-6 bg-surface-container-lowest/90 backdrop-blur-md p-4 rounded-xl border border-white/80 shadow-md">
+<div class="flex items-center gap-2 mb-1">
+<span class="w-2 h-2 rounded-full bg-[#00b870] animate-ping"></span>
+<span class="text-label-caps font-label-caps text-neutral-500">SYSTEM TELEMETRY</span>
+</div>
+<div class="text-headline-sm font-headline-sm text-on-background" id="moment-telemetry-num">99.8%</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant" id="moment-telemetry-desc">Discharge Voltage Stability</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Lifestyle Product Categories Section -->
+<section class="py-20 md:py-28 bg-surface-container-lowest" id="categories">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-label-caps font-label-caps text-[#059669] uppercase tracking-wider block mb-2">OEM Categories</span>
+<h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-on-background tracking-tight">
+            Tailored Cell Architecture for Every Device Class
+          </h2>
+<p class="text-body-md font-body-md text-on-surface-variant mt-3">
+            Modular battery pack topologies designed to fit tightly integrated modern consumer product chassis.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Category 1 -->
+<div class="bg-surface-container-lowest rounded-2xl border border-[#f1f5f9] p-8 custom-shadow-soft hover:custom-shadow-elevated transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="aspect-[16/10] rounded-xl overflow-hidden mb-6 bg-surface-container-low relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close-up aesthetic shot of an aerial camera drone hovering smoothly indoors with soft natural backlight, highlighting its sleek aerodynamic chassis and internal battery compartment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVKgvJp3m8V39LodTV_8lOp36BctHc23BYSF_f7kLeEl-lLLsY9jgDN_EL_9Nw0Am9FHgpv0G_iELabJdDaaV6O7YvOGfkhhdy3jLp1Cf9MzJ8npoPDGQrsWSZPpBvf5v244AlsHGeDLTCEKF9_L4oDSHIg4TETfbfT6WvFSMm5QOd8B97vw05itc5h8p-ir8ZzGGBozbPTUZscCDngDjf_Raon_sjL6PCgIqV7BSHkxiwfQcxy1_gRw"/>
+<div class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 rounded-full text-label-caps font-label-caps text-on-background border border-white/60">
+                  AEROSPACE GRADE
+                </div>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-background mb-2">Drones &amp; Professional Gimbal Systems</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">
+                Engineered for continuous high-amp burst power with instantaneous response. Minimal internal resistance eliminates flight voltage sag during rapid maneuvering.
+              </p>
+</div>
+<div class="space-y-3 pt-4 border-t border-[#f1f5f9]">
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Continuous Burst</span>
+<span class="font-semibold text-on-background">Up to 45A Peak</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Weight-to-Energy</span>
+<span class="font-semibold text-primary">285 Wh/kg</span>
+</div>
+<a class="inline-flex items-center text-label-lg font-label-lg text-primary hover:text-secondary pt-2" href="#contact">
+                View Pack Specs <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Category 2 -->
+<div class="bg-surface-container-lowest rounded-2xl border border-[#f1f5f9] p-8 custom-shadow-soft hover:custom-shadow-elevated transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="aspect-[16/10] rounded-xl overflow-hidden mb-6 bg-surface-container-low relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean, Scandinavian-style workshop bench with a sleek matte white precision cordless drill and a robotic vacuum cleaning in the background, lit with airy warm morning light and tidy modern aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOunBEPF2nlHBmH0ZmgsAjHCBqNduDH8gl-NkJh_m3aE-Kiji7GI0JH0p7PvIQLRgqmTcpeqGEdSaywjUCkV4Y2p0UD63JKyBhD3Ko1jgTkK6Qfxw8GJg9_w_KkCZAlf5-vRcWNshfZzQqi0fGy3oi9uStQyQOe-moDOKCvtgFWoNZmpJaH97NzMfjNBuhbZgjcRMChxO2P7q5jiNAbLjRUvdIcO4Ve6W7YXkBaYWKoTe0bUANR1WQjQ"/>
+<div class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 rounded-full text-label-caps font-label-caps text-on-background border border-white/60">
+                  SMART HOME
+                </div>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-background mb-2">Smart Home &amp; Cordless Appliances</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">
+                Whisper-quiet runtime and rapid recharge for robot vacuums, smart garden tools, and kitchen gadgets. Certified cool-touch exterior during high torque loads.
+              </p>
+</div>
+<div class="space-y-3 pt-4 border-t border-[#f1f5f9]">
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Recharge Cycle</span>
+<span class="font-semibold text-on-background">80% in 25 min</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Acoustic Signature</span>
+<span class="font-semibold text-primary">&lt; 18 dB Thermal Fan</span>
+</div>
+<a class="inline-flex items-center text-label-lg font-label-lg text-primary hover:text-secondary pt-2" href="#contact">
+                View Appliance Modules <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Category 3 -->
+<div class="bg-surface-container-lowest rounded-2xl border border-[#f1f5f9] p-8 custom-shadow-soft hover:custom-shadow-elevated transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="aspect-[16/10] rounded-xl overflow-hidden mb-6 bg-surface-container-low relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A tranquil outdoor camper lifestyle setting with a portable energy station powering ambient warm fairy lights, a laptop, and a camping kettle next to a clean canvas tent under gentle dawn sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvIfkMbAlf7zN67h-Q_PYNED7e9Yv95ox8sOiW471HqnFL_jb22HEg1CLg09aKlprAALNXl7EEjBLFBq2SYtE1_euwn3ouMJSyvcS60LXx3I0WzUV2Ec7RYUO-uZFmU60B_d6fBZVEydpVukzqhgKS_h_L4LT0mIz2RXmmwRhjhz-rc88RtGoxLxa4kcbFJO_6nmhisIW78IHycL9nwK1NS1fBa4xoU_o2soUofMuvUk9KIniWiohA9Q"/>
+<div class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 rounded-full text-label-caps font-label-caps text-on-background border border-white/60">
+                  OUTDOOR EXPLORATION
+                </div>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-background mb-2">Outdoor Portable Power &amp; Camping</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">
+                Clean silent green energy anywhere off the grid. Designed for field durability with IP65 moisture sealing and plug-and-play solar array synchronization.
+              </p>
+</div>
+<div class="space-y-3 pt-4 border-t border-[#f1f5f9]">
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Capacity Range</span>
+<span class="font-semibold text-on-background">300Wh – 2,400Wh</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Operating Temps</span>
+<span class="font-semibold text-primary">-20°C to +55°C</span>
+</div>
+<a class="inline-flex items-center text-label-lg font-label-lg text-primary hover:text-secondary pt-2" href="#contact">
+                View Outdoor Systems <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- OEM Partner Inquiry & Contact Section -->
+<section class="py-20 md:py-28 bg-surface-container-low/40" id="contact">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="bg-surface-container-lowest rounded-3xl border border-[#f1f5f9] p-8 md:p-16 custom-shadow-elevated max-w-5xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<div class="lg:col-span-5">
+<span class="text-label-caps font-label-caps text-[#059669] uppercase tracking-wider block mb-2">Integrate AxiWatt</span>
+<h2 class="text-headline-md md:text-headline-lg font-headline-lg text-on-background tracking-tight mb-4">
+                Build AxiWatt Into Your Next Consumer Product.
+              </h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-8">
+                Connect with our application engineering team for custom 3D enclosure CAD models, battery management API documentation, and prototype cell kits.
+              </p>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-[#ecfdf5] text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">security</span>
+</div>
+<span class="text-body-sm font-label-lg text-on-surface">Full Global Compliance (UN 38.3, IEC 62133)</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-[#ecfdf5] text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">precision_manufacturing</span>
+</div>
+<span class="text-body-sm font-label-lg text-on-surface">Rapid Prototyping Sample Shipments in 14 Days</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-[#ecfdf5] text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">energy_savings_leaf</span>
+</div>
+<span class="text-body-sm font-label-lg text-on-surface">Closed-Loop Life-Cycle Recycling Support</span>
+</div>
+</div>
+</div>
+<!-- Form -->
+<div class="lg:col-span-7 bg-surface-bright p-6 md:p-8 rounded-2xl border border-[#e2e8f0]">
+<form class="space-y-4" onsubmit="event.preventDefault(); alert('Inquiry received. An AxiWatt systems engineer will contact you.');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1.5" for="first-name">First Name</label>
+<input class="w-full h-12 px-4 rounded-lg bg-surface-container-lowest border border-[#e2e8f0] text-on-surface text-body-md focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20" id="first-name" placeholder="Elena" required="" type="text"/>
+</div>
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1.5" for="last-name">Last Name</label>
+<input class="w-full h-12 px-4 rounded-lg bg-surface-container-lowest border border-[#e2e8f0] text-on-surface text-body-md focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20" id="last-name" placeholder="Vance" required="" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1.5" for="work-email">Corporate Email</label>
+<input class="w-full h-12 px-4 rounded-lg bg-surface-container-lowest border border-[#e2e8f0] text-on-surface text-body-md focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20" id="work-email" placeholder="elena@creativetech.io" required="" type="email"/>
+</div>
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1.5" for="product-category">Target Product Category</label>
+<select class="w-full h-12 px-4 rounded-lg bg-surface-container-lowest border border-[#e2e8f0] text-on-surface text-body-md focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20" id="product-category">
+<option>Camera &amp; Drone Systems</option>
+<option>Smart Home &amp; Cordless Appliances</option>
+<option>Outdoor &amp; Camping Power Stations</option>
+<option>Wearables &amp; Personal Electronics</option>
+<option>Custom OEM Enclosure Requirements</option>
+</select>
+</div>
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1.5" for="project-details">Project Specifications &amp; Estimated Annual Volume</label>
+<textarea class="w-full p-4 rounded-lg bg-surface-container-lowest border border-[#e2e8f0] text-on-surface text-body-md focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20" id="project-details" placeholder="Tell us about the desired battery geometry, capacity targets, and timeline..." rows="3"></textarea>
+</div>
+<button class="w-full h-12 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-secondary transition-colors duration-150 flex items-center justify-center shadow-sm" type="submit">
+                  Request OEM Specification Kit
+                </button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Components JSON execution) -->
+<footer class="bg-surface-container-low dark:bg-inverse-surface border-t border-surface-container-high dark:border-outline-variant docked full-width bottom">
+<div class="w-full px-gutter py-space-xl max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-8">
+<div class="flex items-center gap-3">
+<img alt="AxiWatt Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UzSmDBXT-9FWhxI9pwoWILr9ZUJ5cMBxv8kzYluAODdO_IPkczvLCHVomun-FpEKkRJ9YyX2MFGqskaEvI5GfXP4J_pKHaxiRPcqnh_GsEMlGwpWgkm7kEGAOr9DmMjo5ciUXVF7-e7QA04dEiljvUcE62QKD32zwzfeh4bFM_JHf7PSy_63lYBmamuVPzG2ne7P7j5SslcI_Gz_e8sWnDkOjrCLvRx7lwZfMmU4k8Ye8pCo7dOSBcH7NT"/>
+<span class="text-headline-sm font-headline-sm text-on-surface dark:text-inverse-on-surface">AxiWatt</span>
+</div>
+<!-- Links from Shared Components JSON -->
+<div class="flex flex-wrap gap-6 text-label-caps font-label-caps">
+<a class="text-on-surface-variant dark:text-surface-variant transition-colors hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150 ease-in-out" href="#iso">ISO 26262 Certified</a>
+<a class="text-on-surface-variant dark:text-surface-variant transition-colors hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150 ease-in-out" href="#iec">IEC 62133 Compliant</a>
+<a class="text-on-surface-variant dark:text-surface-variant transition-colors hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150 ease-in-out" href="#un">UN 38.3 Verified</a>
+<a class="text-on-surface-variant dark:text-surface-variant transition-colors hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150 ease-in-out" href="#privacy">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-surface-variant transition-colors hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150 ease-in-out" href="#environmental">Environmental Impact</a>
+</div>
+</div>
+<div class="pt-6 border-t border-[#e2e8f0] dark:border-outline-variant/30 flex flex-col sm:flex-row justify-between items-center text-body-sm font-body-sm text-on-surface-variant dark:text-surface-variant">
+<p>© 2025 AxiWatt Systems Inc. Certified High-Reliability Clean Energy Storage. All rights reserved.</p>
+<p class="mt-2 sm:mt-0 text-label-md">Consumer Electronics Division</p>
+</div>
+</div>
+</footer>
+<!-- Micro-interaction script for the "Power in Every Moment" selector -->
+<script>
+    const momentData = {
+      creative: {
+        tag: "DSLRs, Gimbals & Drones",
+        tagIcon: "photo_camera",
+        title: "Uninterrupted High-Bitrate Creation",
+        desc: "Cinema gimbals, motorized sliders, and 4K aerial drones demand surge currents with zero voltage ripple. AxiWatt cells provide consistent continuous discharge, keeping creative rigs steady without thermal throttling.",
+        metric1Label: "Peak Discharge Rate",
+        metric1Val: "35C Continuous",
+        bar1Width: "88%",
+        metric2Label: "Shoot Time Efficiency",
+        metric2Val: "+42% Over Standard Li-ion",
+        bar2Width: "94%",
+        integration: "Fits natively in DJI Ronin, RED V-mount adapters, and custom carbon fiber drone plates.",
+        telemetryNum: "99.8%",
+        telemetryDesc: "Discharge Voltage Stability",
+        altText: "A clean, minimalist studio scene featuring a cinema mirrorless camera mounted on a sleek 3-axis motorized gimbal on a light wood tabletop, alongside a streamlined carbon-fiber drone. Soft natural window light highlights the elegant matte black hardware and precision emerald green battery indicator light."
+      },
+      home: {
+        tag: "Smart Drills & Robotic Vacuums",
+        tagIcon: "precision_manufacturing",
+        title: "Quiet, Cordless Household Freedom",
+        desc: "High-torque electric screwdrivers and autonomous robotic floor cleaners require sustained battery health across thousands of brief micro-charges. AxiWatt cells prevent capacity memory decay and run without whine.",
+        metric1Label: "Sustained Torque Retention",
+        metric1Val: "98.5% at 5% Reserve",
+        bar1Width: "96%",
+        metric2Label: "Noise Suppression Rating",
+        metric2Val: "-12dB Motor Resonance",
+        bar2Width: "82%",
+        integration: "Drop-in compatibility for compact cylindrical power tool battery packs and robot docks.",
+        telemetryNum: "32.1°C",
+        telemetryDesc: "Peak Full-Torque Thermal Casing",
+        altText: "A bright, elegant Scandinavian living room and workshop nook with an ultra-sleek matte white precision electric screwdriver on a pale wooden table, and a modern robotic vacuum moving silently on light wood flooring under soft morning sunlight."
+      },
+      outdoor: {
+        tag: "Portable Stations & Camp Lanterns",
+        tagIcon: "forest",
+        title: "Off-Grid Peace of Mind",
+        desc: "From freezing dawn basecamps to hot afternoon river trails, our high-density solid-state-infused chemistry ensures instant AC/DC power for induction cookers, Starlink dishes, and ambient campsite illumination.",
+        metric1Label: "Cold-Weather Output (-20°C)",
+        metric1Val: "91% Usable Capacity",
+        bar1Width: "91%",
+        metric2Label: "Solar Ingestion Rate",
+        metric2Val: "99.2% MPPT Efficiency",
+        bar2Width: "99%",
+        integration: "Supports bidirectional USB-C 140W PD, 12V Anderson powerpole, and MC4 solar arrays.",
+        telemetryNum: "1,200+",
+        telemetryDesc: "Verified Full Life Cycles to 80%",
+        altText: "A serene, sunlit camping setup at dawn with a modern, compact black and orange portable power station sitting neatly on a picnic table next to a steaming cup of coffee and a rolled yoga mat, with lush green pine trees in the background."
+      }
+    };
+
+    function switchMoment(key) {
+      const data = momentData[key];
+      if (!data) return;
+
+      // Update button styling
+      ['creative', 'home', 'outdoor'].forEach(k => {
+        const btn = document.getElementById(`btn-${k}`);
+        if (k === key) {
+          btn.className = "px-5 py-2.5 rounded-lg text-label-lg font-label-lg transition-all duration-150 bg-on-background text-surface";
+        } else {
+          btn.className = "px-5 py-2.5 rounded-lg text-label-lg font-label-lg transition-all duration-150 text-on-surface-variant hover:text-on-background";
+        }
+      });
+
+      // Update content
+      const tagEl = document.getElementById('moment-tag');
+      tagEl.innerHTML = `<span class="material-symbols-outlined text-sm">${data.tagIcon}</span><span>${data.tag}</span>`;
+      
+      document.getElementById('moment-title').textContent = data.title;
+      document.getElementById('moment-desc').textContent = data.desc;
+      
+      document.getElementById('moment-metric-1-label').textContent = data.metric1Label;
+      document.getElementById('moment-metric-1-val').textContent = data.metric1Val;
+      document.getElementById('moment-bar-1').style.width = data.bar1Width;
+      
+      document.getElementById('moment-metric-2-label').textContent = data.metric2Label;
+      document.getElementById('moment-metric-2-val').textContent = data.metric2Val;
+      document.getElementById('moment-bar-2').style.width = data.bar2Width;
+
+      document.getElementById('moment-integration').textContent = data.integration;
+      document.getElementById('moment-telemetry-num').textContent = data.telemetryNum;
+      document.getElementById('moment-telemetry-desc').textContent = data.telemetryDesc;
+
+      // Update image alt attribute
+      const imgEl = document.getElementById('moment-image');
+      imgEl.setAttribute('data-alt', data.altText);
+    }
+  </script>
+</body></html>

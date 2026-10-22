@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AxiWatt — Light EV Mobility | Electric 2-Wheelers &amp; 3-Wheelers</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Plus Jakarta Sans Font -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with custom config -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-background": "#131b2e",
+            "surface": "#faf8ff",
+            "outline-variant": "#bbcabd",
+            "primary": "#006d40",
+            "surface-container-highest": "#dae2fd",
+            "inverse-primary": "#4ce093",
+            "on-error-container": "#93000a",
+            "error-container": "#ffdad6",
+            "secondary-container": "#82f5c1",
+            "outline": "#6c7b6f",
+            "tertiary-fixed": "#ffdad9",
+            "primary-container": "#00b870",
+            "surface-container": "#eaedff",
+            "secondary-fixed": "#85f8c4",
+            "surface-variant": "#dae2fd",
+            "on-tertiary-container": "#72091a",
+            "on-secondary-fixed": "#002114",
+            "on-primary": "#ffffff",
+            "on-primary-fixed-variant": "#00522f",
+            "on-primary-fixed": "#002110",
+            "surface-tint": "#006d40",
+            "error": "#ba1a1a",
+            "secondary": "#006c4a",
+            "on-primary-container": "#004124",
+            "on-surface-variant": "#3d4a40",
+            "on-tertiary-fixed": "#400009",
+            "secondary-fixed-dim": "#68dba9",
+            "on-secondary-container": "#00714e",
+            "on-tertiary": "#ffffff",
+            "surface-container-low": "#f2f3ff",
+            "inverse-surface": "#283044",
+            "on-error": "#ffffff",
+            "tertiary": "#a9353d",
+            "inverse-on-surface": "#eef0ff",
+            "tertiary-container": "#ff757a",
+            "on-secondary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed-variant": "#881c28",
+            "surface-dim": "#d2d9f4",
+            "on-secondary-fixed-variant": "#005137",
+            "primary-fixed-dim": "#4ce093",
+            "background": "#faf8ff",
+            "on-surface": "#131b2e",
+            "surface-container-high": "#e2e7ff",
+            "surface-bright": "#faf8ff",
+            "primary-fixed": "#6dfdad",
+            "tertiary-fixed-dim": "#ffb3b3"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "margin": "2.5rem",
+            "space-md": "1rem",
+            "gutter-mobile": "1rem",
+            "space-xl": "2.5rem",
+            "margin-mobile": "1.25rem"
+          },
+          "fontFamily": {
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "label-caps": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "display-hero": ["Plus Jakarta Sans"],
+            "display-hero-mobile": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "display-hero-mobile": ["38px", { "lineHeight": "46px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-shadow-ambient {
+      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.03);
+    }
+    .custom-shadow-bloom {
+      box-shadow: 0 12px 32px -4px rgba(15, 23, 42, 0.06);
+    }
+    .custom-shadow-float {
+      box-shadow: 0 24px 48px -12px rgba(15, 23, 42, 0.08);
+    }
+    @keyframes pulse-dot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.7; }
+    }
+    .animate-pulse-dot {
+      animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes float-subtle {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    .animate-float {
+      animation: float-subtle 6s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface antialiased font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation Bar (Shared Component: TopNavBar) -->
+<header class="bg-surface-container-lowest dark:bg-inverse-surface border-b border-surface-container-high dark:border-outline-variant shadow-sm dark:shadow-none docked full-width top-0 sticky z-50 transition-colors duration-150 ease-in-out">
+<div class="flex justify-between items-center w-full px-gutter max-w-7xl mx-auto h-20">
+<!-- Brand Anchor -->
+<a class="flex items-center gap-3" href="#">
+<img alt="AxiWatt Logo" class="h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UzSmDBXT-9FWhxI9pwoWILr9ZUJ5cMBxv8kzYluAODdO_IPkczvLCHVomun-FpEKkRJ9YyX2MFGqskaEvI5GfXP4J_pKHaxiRPcqnh_GsEMlGwpWgkm7kEGAOr9DmMjo5ciUXVF7-e7QA04dEiljvUcE62QKD32zwzfeh4bFM_JHf7PSy_63lYBmamuVPzG2ne7P7j5SslcI_Gz_e8sWnDkOjrCLvRx7lwZfMmU4k8Ye8pCo7dOSBcH7NT"/>
+<span class="text-headline-sm font-headline-sm text-on-surface dark:text-inverse-on-surface tracking-tight font-bold">AxiWatt</span>
+</a>
+<!-- Desktop Navigation Links (EV Mobility marked as active per context) -->
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-label-lg font-label-lg text-primary dark:text-inverse-primary border-b-2 border-primary dark:border-inverse-primary pb-1 transition-colors duration-150 ease-in-out" href="#ev-mobility">EV Mobility</a>
+<a class="text-label-lg font-label-lg text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150 ease-in-out" href="#consumer">Consumer</a>
+<a class="text-label-lg font-label-lg text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150 ease-in-out" href="#medical-tech">Medical Tech</a>
+<a class="text-label-lg font-label-lg text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150 ease-in-out" href="#sustainability">Sustainability</a>
+</nav>
+<!-- Trailing Primary Action -->
+<div class="flex items-center gap-4">
+<button class="bg-primary hover:bg-[#059669] text-on-primary font-label-lg text-label-lg px-6 h-12 rounded-lg transition-all duration-200 custom-shadow-ambient hover:custom-shadow-bloom flex items-center gap-2">
+<span>Partner with Us</span>
+<span class="material-symbols-outlined text-sm font-semibold">arrow_forward</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative pt-12 pb-24 md:pt-20 md:pb-32 overflow-hidden bg-gradient-to-b from-surface-bright via-surface-container-lowest to-surface-container-low/30" id="ev-mobility">
+<div class="max-w-7xl mx-auto px-gutter">
+<!-- Section Tag / Status Pill -->
+<div class="flex items-center gap-3 mb-6">
+<span class="inline-flex items-center gap-2 rounded-full px-3 py-1.5 bg-[#ecfdf5] text-primary text-label-md font-label-md">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse-dot"></span>
+          Next-Gen Urban Clean Energy
+        </span>
+<span class="text-on-surface-variant text-label-caps font-label-caps hidden sm:inline-block tracking-wider">MODULAR ARCHITECTURE 4.0</span>
+</div>
+<!-- Main Grid Hero -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<!-- Left Content -->
+<div class="lg:col-span-6 space-y-6">
+<h1 class="text-display-hero-mobile md:text-display-hero font-display-hero text-on-surface tracking-tight font-bold">
+            Everyday Urban Mobility. Powered for Seamless Daily Journeys.
+          </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant leading-relaxed max-w-xl">
+            Lightweight, swappable and fast-charging battery packs built specifically for urban electric scooters, e-motorcycles, and commercial 3-wheeler delivery fleets.
+          </p>
+<!-- Primary CTAs -->
+<div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+<button class="bg-primary hover:bg-[#059669] text-on-primary font-label-lg text-label-lg px-7 h-12 rounded-lg transition-all duration-200 flex items-center justify-center gap-2 custom-shadow-bloom">
+<span class="material-symbols-outlined text-lg">electric_rickshaw</span>
+<span>Explore Fleet Solutions</span>
+</button>
+<button class="bg-[#f1f5f9] hover:bg-[#e2e8f0] text-[#0f172a] font-label-lg text-label-lg px-6 h-12 rounded-lg border border-surface-container-high transition-colors duration-150 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">swap_horiz</span>
+<span>View Swapping Network</span>
+</button>
+</div>
+<!-- Quick Metrics Bar -->
+<div class="pt-8 border-t border-surface-container-high grid grid-cols-3 gap-6">
+<div>
+<span class="block text-label-caps font-label-caps text-on-surface-variant">AVERAGE SWAP</span>
+<span class="text-headline-md font-headline-md text-on-surface font-bold">&lt;45s</span>
+<span class="block text-body-sm font-body-sm text-primary font-medium">Ultra-Fast Dock</span>
+</div>
+<div>
+<span class="block text-label-caps font-label-caps text-on-surface-variant">FLEET UPTIME</span>
+<span class="text-headline-md font-headline-md text-on-surface font-bold">99.8%</span>
+<span class="block text-body-sm font-body-sm text-primary font-medium">Continuous Shift</span>
+</div>
+<div>
+<span class="block text-label-caps font-label-caps text-on-surface-variant">BATTERY LIFE</span>
+<span class="text-headline-md font-headline-md text-on-surface font-bold">2,500+</span>
+<span class="block text-body-sm font-body-sm text-primary font-medium">Full Cycles</span>
+</div>
+</div>
+</div>
+<!-- Right Visual Showcase / Image -->
+<div class="lg:col-span-6 relative">
+<!-- Ambient Radial Backdrop Glow -->
+<div class="absolute -top-10 -right-10 w-96 h-96 bg-secondary-container/30 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative bg-surface-container-lowest rounded-2xl p-3 border border-surface-container-high custom-shadow-bloom animate-float">
+<!-- Staged Hero Image of urban micro-mobility charging hub -->
+<div class="relative rounded-xl overflow-hidden aspect-[16/10] bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="A clean, sunlit European city boulevard with a modern urban charging station featuring a sleek grey electric scooter and a compact electric three-wheeler passenger taxi. Warm natural daylight illuminates the smooth cobblestones and minimalist Scandinavian architecture in the background, creating a bright, serene, and forward-looking urban lifestyle aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-3amLVQmuNS0f3YyiyQZlZrLwBDdnPApUWKZqQfnRsaLbdCr1FFSBV0AqMpPVv0X6sKnrX8xp_2JUzuOD8lwSNPMu4z1N8sYTzMPJsx3awUCnjKAJEC50RXxx9CKuzOLAG9GDELyJwomrREuNvEHRU1rSlL6Zj3f_nDDYlI9XJw8RkyNlB0iKSyKagbVdCiiBcRB39ccyT9MQNWSlNHUEXdLkuUUm47Lza3YT18A1oKQiUBtEJRf08g"/>
+<!-- Floating Pill Indicator 1: Telemetry Badge -->
+<div class="absolute top-4 left-4 bg-surface-container-lowest/95 backdrop-blur-md px-4 py-2.5 rounded-xl border border-surface-container-high custom-shadow-float flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-primary-container animate-pulse"></span>
+<div>
+<div class="text-label-caps font-label-caps text-on-surface-variant">SYSTEM STATUS</div>
+<div class="text-label-md font-label-md text-on-surface font-bold">Active Grid Synchronization</div>
+</div>
+</div>
+<!-- Interactive Battery Status Floating Overlay Bar -->
+<div class="absolute bottom-4 inset-x-4 bg-surface-container-lowest/95 backdrop-blur-md rounded-xl p-4 border border-surface-container-high custom-shadow-float">
+<div class="flex flex-wrap items-center justify-between gap-3 text-label-md font-label-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" data-weight="fill" style="font-variation-settings: 'FILL' 1;">battery_charging_full</span>
+<span class="text-on-surface font-bold">100% Charged</span>
+</div>
+<div class="h-4 w-px bg-surface-container-high"></div>
+<div class="flex items-center gap-1.5 text-on-surface font-medium">
+<span class="material-symbols-outlined text-primary text-lg">route</span>
+<span>140 km Urban Range</span>
+</div>
+<div class="h-4 w-px bg-surface-container-high"></div>
+<div class="flex items-center gap-1.5 text-primary font-bold">
+<span class="material-symbols-outlined text-base">timer</span>
+<span>Swapped in 45s</span>
+</div>
+</div>
+<!-- Mini Progress Track -->
+<div class="mt-2.5 w-full bg-[#f1f5f9] h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full w-full"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works in Everyday Life Section (Bento Storytelling) -->
+<section class="py-20 md:py-28 bg-surface-container-lowest border-y border-surface-container-high">
+<div class="max-w-7xl mx-auto px-gutter">
+<!-- Section Header -->
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-label-caps font-label-caps text-primary tracking-widest uppercase">Everyday Intuitive Architecture</span>
+<h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-on-surface mt-2 font-bold tracking-tight">
+          How It Works in Everyday Life
+        </h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mt-4">
+          Engineered for effortless city rhythm. No cumbersome plugs, no prolonged charging downtime, and zero technical friction.
+        </p>
+</div>
+<!-- Bento Grid (4 Interactive Story Pillars) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Pillar 1 -->
+<div class="group bg-[#f8fafc] hover:bg-surface-container-lowest p-8 rounded-2xl border border-surface-container-high transition-all duration-200 custom-shadow-ambient hover:custom-shadow-bloom flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-[#ecfdf5] text-primary flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-2xl">sync_alt</span>
+</div>
+<div class="text-label-caps font-label-caps text-on-surface-variant mb-1">STEP 01</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface font-semibold mb-3">
+              Instant Swapping at City Kiosks
+            </h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+              Slide-and-click modular packs that drivers swap in under 60 seconds with ergonomic single-latch handles.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container-high flex items-center justify-between text-label-md font-label-md text-primary font-semibold">
+<span>&lt; 60s Duration</span>
+<span class="material-symbols-outlined text-lg">check_circle</span>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="group bg-[#f8fafc] hover:bg-surface-container-lowest p-8 rounded-2xl border border-surface-container-high transition-all duration-200 custom-shadow-ambient hover:custom-shadow-bloom flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-[#ecfdf5] text-primary flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-2xl">energy_savings_leaf</span>
+</div>
+<div class="text-label-caps font-label-caps text-on-surface-variant mb-1">STEP 02</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface font-semibold mb-3">
+              Regenerative City Braking
+            </h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+              Energy reclaimed dynamically on downhill slopes and traffic stop-and-go commuting, boosting daily range by up to 18%.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container-high flex items-center justify-between text-label-md font-label-md text-primary font-semibold">
+<span>+18% Energy Recaptured</span>
+<span class="material-symbols-outlined text-lg">autorenew</span>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="group bg-[#f8fafc] hover:bg-surface-container-lowest p-8 rounded-2xl border border-surface-container-high transition-all duration-200 custom-shadow-ambient hover:custom-shadow-bloom flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-[#ecfdf5] text-primary flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-2xl">thunderstorm</span>
+</div>
+<div class="text-label-caps font-label-caps text-on-surface-variant mb-1">STEP 03</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface font-semibold mb-3">
+              All-Weather Reliability
+            </h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+              Hermetically IP67-sealed cells rigorously stress-tested for tropical monsoons, 50°C street heatwaves, and harsh vibrations.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container-high flex items-center justify-between text-label-md font-label-md text-primary font-semibold">
+<span>IP67 Immersion Rated</span>
+<span class="material-symbols-outlined text-lg">verified</span>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="group bg-[#f8fafc] hover:bg-surface-container-lowest p-8 rounded-2xl border border-surface-container-high transition-all duration-200 custom-shadow-ambient hover:custom-shadow-bloom flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-[#ecfdf5] text-primary flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-2xl">phone_iphone</span>
+</div>
+<div class="text-label-caps font-label-caps text-on-surface-variant mb-1">STEP 04</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface font-semibold mb-3">
+              Smart App Connectivity
+            </h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+              Predictive remaining distance calculations, GPS geofenced anti-theft lockdown, and instant battery health diagnostics.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container-high flex items-center justify-between text-label-md font-label-md text-primary font-semibold">
+<span>Real-Time Cloud Link</span>
+<span class="material-symbols-outlined text-lg">wifi_tethering</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Animated Power Flow & Telemetry Widget -->
+<section class="py-20 md:py-28 bg-[#f8fafc]">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="bg-surface-container-lowest rounded-2xl border border-surface-container-high p-8 md:p-12 custom-shadow-bloom">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div>
+<div class="flex items-center gap-2 text-primary text-label-caps font-label-caps uppercase">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+              Live Telemetry Simulation
+            </div>
+<h2 class="text-headline-md font-headline-md text-on-surface font-bold mt-1">
+              Interactive Power Flow Architecture
+            </h2>
+<p class="text-body-md font-body-md text-on-surface-variant mt-2 max-w-xl">
+              Switch operational modes to observe direct power distribution between the AxiWatt pack, regenerative powertrain, and intelligent vehicle console.
+            </p>
+</div>
+<!-- Mode Switcher Controls -->
+<div class="inline-flex p-1 bg-[#f1f5f9] rounded-xl border border-surface-container-high">
+<button class="px-5 py-2.5 rounded-lg text-label-md font-label-md font-semibold transition-all duration-150 bg-surface-container-lowest text-on-surface shadow-sm" id="mode-drive" onclick="setMode('drive')">
+              Acceleration
+            </button>
+<button class="px-5 py-2.5 rounded-lg text-label-md font-label-md font-semibold transition-all duration-150 text-on-surface-variant hover:text-on-surface" id="mode-regen" onclick="setMode('regen')">
+              Regenerative Stop
+            </button>
+<button class="px-5 py-2.5 rounded-lg text-label-md font-label-md font-semibold transition-all duration-150 text-on-surface-variant hover:text-on-surface" id="mode-swap" onclick="setMode('swap')">
+              Dock Fast-Charge
+            </button>
+</div>
+</div>
+<!-- Visual Flow Display Container -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#f8fafc] rounded-2xl p-6 md:p-10 border border-surface-container-high relative overflow-hidden">
+<!-- Node 1: Swappable Battery Pack -->
+<div class="lg:col-span-4 bg-surface-container-lowest rounded-xl p-6 border border-surface-container-high custom-shadow-ambient">
+<div class="flex items-center justify-between mb-4">
+<span class="text-label-caps font-label-caps text-on-surface-variant">MODULE A-1</span>
+<span class="px-2.5 py-1 rounded-full text-label-md font-label-md bg-[#ecfdf5] text-primary font-medium" id="pack-status">Delivering 48V</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-xl bg-secondary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">sim_card_download</span>
+</div>
+<div>
+<h4 class="text-headline-sm font-headline-sm text-on-surface font-bold">AxiWatt Core 2.8</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">LFP Safe Thermal Array</p>
+</div>
+</div>
+<!-- Battery Gauge Bar -->
+<div class="mt-6 space-y-2">
+<div class="flex justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">State of Charge</span>
+<span class="font-bold text-on-surface" id="pack-pct">94%</span>
+</div>
+<div class="w-full bg-[#f1f5f9] h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-500" id="gauge-bar" style="width: 94%;"></div>
+</div>
+</div>
+</div>
+<!-- Central Animated Flow Indicator -->
+<div class="lg:col-span-4 flex flex-col items-center justify-center py-4 space-y-4">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-primary-container animate-ping"></span>
+<span class="text-label-md font-label-md font-bold text-primary tracking-wide" id="flow-label">Discharging • 4.2 kW</span>
+</div>
+<!-- Dynamic Vector Conduit Flow -->
+<div class="w-full relative flex items-center justify-center">
+<div class="h-1.5 w-full bg-[#e2e8f0] rounded-full overflow-hidden relative">
+<div class="h-full bg-gradient-to-r from-primary-container via-primary to-primary-container w-1/3 rounded-full animate-pulse transition-all duration-300" id="flow-line"></div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 w-full text-center">
+<div class="bg-surface-container-lowest p-3 rounded-xl border border-surface-container-high">
+<span class="text-label-caps font-label-caps text-on-surface-variant block">THERMAL CORE</span>
+<span class="text-headline-sm font-headline-sm text-on-surface font-bold" id="flow-temp">29.4°C</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl border border-surface-container-high">
+<span class="text-label-caps font-label-caps text-on-surface-variant block">EFFICIENCY</span>
+<span class="text-headline-sm font-headline-sm text-primary font-bold" id="flow-eff">98.2%</span>
+</div>
+</div>
+</div>
+<!-- Node 2: Powertrain & Telemetry Console -->
+<div class="lg:col-span-4 bg-surface-container-lowest rounded-xl p-6 border border-surface-container-high custom-shadow-ambient">
+<div class="flex items-center justify-between mb-4">
+<span class="text-label-caps font-label-caps text-on-surface-variant">MICRO-CONTROLLER</span>
+<span class="px-2.5 py-1 rounded-full text-label-md font-label-md bg-surface-container text-on-surface font-medium" id="motor-badge">Torque Vectoring</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-xl bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-3xl">electric_bolt</span>
+</div>
+<div>
+<h4 class="text-headline-sm font-headline-sm text-on-surface font-bold">Direct Hub Motor</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Dual Inverter CAN-bus</p>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container-high flex justify-between items-center">
+<div>
+<span class="text-label-caps font-label-caps text-on-surface-variant block">CURRENT SPEED</span>
+<span class="text-headline-sm font-headline-sm text-on-surface font-bold" id="speed-indicator">48 km/h</span>
+</div>
+<div class="text-right">
+<span class="text-label-caps font-label-caps text-on-surface-variant block">PROJECTED RANGE</span>
+<span class="text-headline-sm font-headline-sm text-primary font-bold">128 km</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Lifestyle Showcase Cards (2-Wheelers & 3-Wheelers Fleet) -->
+<section class="py-20 md:py-28 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+<div>
+<span class="text-label-caps font-label-caps text-primary tracking-widest uppercase">Target Vehicle Segments</span>
+<h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-on-surface font-bold mt-2 tracking-tight">
+            Tailored for Every City Transit Need
+          </h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mt-2 max-w-2xl">
+            From agile solo commuter two-wheelers to heavy commercial logistics three-wheelers, our standardized cell packs maximize daily revenue and urban flow.
+          </p>
+</div>
+<div>
+<button class="bg-[#f1f5f9] hover:bg-[#e2e8f0] text-[#0f172a] font-label-lg text-label-lg px-6 h-12 rounded-lg border border-surface-container-high transition-colors flex items-center gap-2">
+<span>Download OEM Architecture Spec</span>
+<span class="material-symbols-outlined text-lg">download</span>
+</button>
+</div>
+</div>
+<!-- Showcase 3-Card Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Card 1: Electric Commuter Scooters -->
+<div class="bg-surface-container-lowest rounded-2xl border border-surface-container-high p-8 custom-shadow-ambient hover:custom-shadow-bloom transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="relative rounded-xl overflow-hidden aspect-[4/3] bg-surface-container-low mb-6">
+<img class="w-full h-full object-cover" data-alt="A modern, high-tech electric commuter scooter parked on a minimalist city terrace overlooking a green metropolitan park during early morning golden hour. The scooter has a sleek matte finish and refined clean lines, bathed in soft daylight with pristine white and emerald architectural accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4cm4zJ_xvpFMZUCoz45cqIB7CxXJdr9xH8s3JB2rBC1xSQr_7Zb6B1vURxlLfUhLaQgdCVPYxWnOM-6v-CvKaWEooURa7K0ENIAaUBay75dYSpbWOSIRm3v1XMpYZktQw22K2SqGw-K542ywqd8QeFMeKX364F2ZV0ACZw_Y__89obCJ_rQJH3VI82obWIhPuALYpFJw_fuOgdF7882t4a27s3tHg_Muu2iAftZIvr2t4sJTPS3nNKw"/>
+<div class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-3 py-1 rounded-full text-label-caps font-label-caps text-on-surface font-semibold border border-surface-container-high">
+                SOLO COMMUTE
+              </div>
+</div>
+<div class="flex items-center gap-2 mb-2 text-primary font-semibold text-label-md font-label-md">
+<span class="material-symbols-outlined text-lg">two_wheeler</span>
+<span>Class L1e / L3e</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface font-bold mb-3">
+              Electric Commuter Scooters
+            </h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+              Whisper-quiet, ultra-ergonomic, and ideal for the daily morning rush. Lightweight packs allow effortless single-hand extraction and desk charging.
+            </p>
+</div>
+<div class="mt-8 pt-6 border-t border-surface-container-high space-y-3">
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Pack Configuration</span>
+<span class="font-semibold text-on-surface">Single 2.2 kWh Swappable</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Single Charge Range</span>
+<span class="font-semibold text-on-surface">85 - 110 km</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Curb Weight Benefit</span>
+<span class="font-semibold text-primary">-14 kg vs. Lead-Acid</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Cargo & Delivery 3-Wheelers -->
+<div class="bg-surface-container-lowest rounded-2xl border border-surface-container-high p-8 custom-shadow-ambient hover:custom-shadow-bloom transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="relative rounded-xl overflow-hidden aspect-[4/3] bg-surface-container-low mb-6">
+<img class="w-full h-full object-cover" data-alt="A clean white commercial electric cargo three-wheeler parked outside a smart urban logistics micro-hub. Delivery parcel boxes are neatly organized, and the delivery driver is casually unlocking a quick-swap battery module with high-contrast emerald green details in clear sunny daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX0quTqWUpk2Crm_pu2PXZuxpX_FeCe_LO3kk7XlwTqklHtblsH44EQ5hs_AdRgq1TKZ3siMKK5BYYH2eAyIOAIDNvB7mvK4gRZXaafx21hQXhqnfUfKE8dVYAhHAaUYD81ZmwqEOFzQerV3ehhKJQliigPtFOOnRn_Vvq1NrQstTOAt2i_S0eFQS4_MdSwAk3egmSRryr2lXA-kb0_xP7DF3k1ucJwDGZZJ32XzlsmF3450568K0iyg"/>
+<div class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-3 py-1 rounded-full text-label-caps font-label-caps text-on-surface font-semibold border border-surface-container-high">
+                LAST-MILE LOGISTICS
+              </div>
+</div>
+<div class="flex items-center gap-2 mb-2 text-primary font-semibold text-label-md font-label-md">
+<span class="material-symbols-outlined text-lg">local_shipping</span>
+<span>Class L5N Cargo</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface font-bold mb-3">
+              Cargo &amp; Delivery 3-Wheelers
+            </h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+              Built for maximum payload stability and relentless 18-hour continuous commercial shifts. Dual parallel battery trays ensure 100% daily fleet uptime.
+            </p>
+</div>
+<div class="mt-8 pt-6 border-t border-surface-container-high space-y-3">
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Pack Configuration</span>
+<span class="font-semibold text-on-surface">Dual Linked 5.6 kWh</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Payload Capacity</span>
+<span class="font-semibold text-on-surface">Up to 650 kg</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Fleet Uptime Guarantee</span>
+<span class="font-semibold text-primary">Zero Depot Charging Bottlenecks</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Urban Rickshaws & Shuttles -->
+<div class="bg-surface-container-lowest rounded-2xl border border-surface-container-high p-8 custom-shadow-ambient hover:custom-shadow-bloom transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="relative rounded-xl overflow-hidden aspect-[4/3] bg-surface-container-low mb-6">
+<img class="w-full h-full object-cover" data-alt="A modern passenger electric rickshaw cab parked at a well-lit public transit interchange in an eco-friendly smart city. Happy passengers are boarding the comfortable open-air vehicle with smooth pavement and lush green urban landscaping visible around the modern mobility stand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsbdM9guDW_07--NGsIRUaMDsFXGWjLMTK6dueD2wOyHDA8FLBwfI29fHpawHf6U3aDI7GQO8d1oS4M9PySgkcXYuZrxP63vo79kAT--03tUiNYWLqnC3RGu-YbS4ZK-Id4_CngXEIFAnY8-HjNYAOWjaAMkdMtHLSJql3i6tQT7KHcGLEyCsTa3U7VtafyxXiQXiEeV9D8Xx476DongrdTeKE3RMdnxMHzgP0QI5L_LzpMDxr51gguA"/>
+<div class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-3 py-1 rounded-full text-label-caps font-label-caps text-on-surface font-semibold border border-surface-container-high">
+                PASSENGER TRANSIT
+              </div>
+</div>
+<div class="flex items-center gap-2 mb-2 text-primary font-semibold text-label-md font-label-md">
+<span class="material-symbols-outlined text-lg">electric_rickshaw</span>
+<span>Class L5M Passenger</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface font-bold mb-3">
+              Urban Rickshaws &amp; Shuttles
+            </h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+              Dependable, safe passenger conveyance for metropolitan cores. Equipped with rapid 15-minute quick top-up support and triple-redundant thermal sensors.
+            </p>
+</div>
+<div class="mt-8 pt-6 border-t border-surface-container-high space-y-3">
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Pack Configuration</span>
+<span class="font-semibold text-on-surface">Tri-Pack 7.2 kWh Modular</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Rapid Boost</span>
+<span class="font-semibold text-on-surface">15-min (+40 km)</span>
+</div>
+<div class="flex justify-between items-center text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Safety Compliance</span>
+<span class="font-semibold text-primary">ISO 26262 ASIL-B Verified</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Institutional Trust & Certified Standards Strip -->
+<section class="py-14 bg-[#f8fafc] border-y border-surface-container-high">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="max-w-md">
+<span class="text-label-caps font-label-caps text-on-surface-variant uppercase tracking-wider">INSTITUTIONAL VALIDATION</span>
+<h4 class="text-headline-sm font-headline-sm text-on-surface font-bold mt-1">Certified for Demanding Global OEM Deployment</h4>
+</div>
+<div class="flex flex-wrap items-center gap-4 sm:gap-6">
+<div class="bg-surface-container-lowest px-5 py-3 rounded-xl border border-surface-container-high flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">verified_user</span>
+<div>
+<div class="text-label-md font-label-md font-bold text-on-surface">UN 38.3</div>
+<div class="text-label-caps font-label-caps text-on-surface-variant">Transport Safety</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest px-5 py-3 rounded-xl border border-surface-container-high flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">water_drop</span>
+<div>
+<div class="text-label-md font-label-md font-bold text-on-surface">IP67 Ingress</div>
+<div class="text-label-caps font-label-caps text-on-surface-variant">Submersion Proof</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest px-5 py-3 rounded-xl border border-surface-container-high flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">security</span>
+<div>
+<div class="text-label-md font-label-md font-bold text-on-surface">ISO 26262</div>
+<div class="text-label-caps font-label-caps text-on-surface-variant">Automotive Functional</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest px-5 py-3 rounded-xl border border-surface-container-high flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">bolt</span>
+<div>
+<div class="text-label-md font-label-md font-bold text-on-surface">IEC 62133</div>
+<div class="text-label-caps font-label-caps text-on-surface-variant">Cell Stability</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action Banner -->
+<section class="py-20 md:py-28 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="relative bg-gradient-to-r from-surface-container-low via-surface-container to-surface-container-low rounded-3xl p-10 md:p-16 border border-surface-container-high overflow-hidden">
+<div class="max-w-2xl relative z-10">
+<span class="inline-flex items-center gap-2 rounded-full px-3 py-1 bg-surface-container-lowest text-primary text-label-md font-label-md mb-4 border border-surface-container-high">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+            Commercial Pilot Programs Open
+          </span>
+<h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-on-surface font-bold tracking-tight">
+            Electrify Your 2-Wheeler &amp; 3-Wheeler Fleet with AxiWatt
+          </h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mt-4">
+            Integrate standardized, safe, swappable cell architecture into your OEM chassis or commercial fleet operations today.
+          </p>
+<div class="mt-8 flex flex-col sm:flex-row gap-4">
+<button class="bg-primary hover:bg-[#059669] text-on-primary font-label-lg text-label-lg px-8 h-12 rounded-lg transition-all duration-200 custom-shadow-bloom flex items-center justify-center gap-2">
+<span>Schedule Fleet Consultation</span>
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+</button>
+<button class="bg-surface-container-lowest hover:bg-[#f8fafc] text-on-surface font-label-lg text-label-lg px-6 h-12 rounded-lg border border-surface-container-high transition-colors flex items-center justify-center gap-2">
+<span>Request Evaluation Pack</span>
+<span class="material-symbols-outlined text-lg">box</span>
+</button>
+</div>
+</div>
+<!-- Subtle decorative energy swirl background -->
+<div class="absolute -right-20 -bottom-20 w-96 h-96 bg-primary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+</div>
+</div>
+</section>
+<!-- Footer (Shared Component: Footer) -->
+<footer class="bg-surface-container-low dark:bg-inverse-surface border-t border-surface-container-high dark:border-outline-variant flat no shadows">
+<div class="w-full px-gutter py-space-xl max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-surface-container-high dark:border-outline-variant">
+<!-- Brand & Description -->
+<div class="md:col-span-5 space-y-4">
+<div class="flex items-center gap-3">
+<img alt="AxiWatt Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UzSmDBXT-9FWhxI9pwoWILr9ZUJ5cMBxv8kzYluAODdO_IPkczvLCHVomun-FpEKkRJ9YyX2MFGqskaEvI5GfXP4J_pKHaxiRPcqnh_GsEMlGwpWgkm7kEGAOr9DmMjo5ciUXVF7-e7QA04dEiljvUcE62QKD32zwzfeh4bFM_JHf7PSy_63lYBmamuVPzG2ne7P7j5SslcI_Gz_e8sWnDkOjrCLvRx7lwZfMmU4k8Ye8pCo7dOSBcH7NT"/>
+<span class="text-headline-sm font-headline-sm text-on-surface dark:text-inverse-on-surface font-bold tracking-tight">AxiWatt</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant dark:text-surface-variant max-w-sm">
+            Setting the global benchmark for safe, modular, swappable clean energy storage across urban light mobility and mission-critical devices.
+          </p>
+<div class="flex items-center gap-2 text-label-caps font-label-caps text-primary dark:text-inverse-primary pt-2">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+            ALL SYSTEMS NORMAL • GLOBAL TELEMETRY ONLINE
+          </div>
+</div>
+<!-- Quick Links Column 1 -->
+<div class="md:col-span-2 space-y-3">
+<div class="text-label-caps font-label-caps text-on-surface dark:text-inverse-on-surface font-bold uppercase">Platforms</div>
+<ul class="space-y-2 text-body-sm font-body-sm">
+<li><a class="text-primary dark:text-inverse-primary transition-colors duration-150 ease-in-out hover:text-primary dark:hover:text-inverse-primary" href="#ev-mobility">EV Mobility</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant transition-colors duration-150 ease-in-out hover:text-primary dark:hover:text-inverse-primary" href="#consumer">Consumer Tech</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant transition-colors duration-150 ease-in-out hover:text-primary dark:hover:text-inverse-primary" href="#medical-tech">Medical Storage</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant transition-colors duration-150 ease-in-out hover:text-primary dark:hover:text-inverse-primary" href="#sustainability">Circularity</a></li>
+</ul>
+</div>
+<!-- Quick Links Column 2: Verifications (Mandated strings in JSON) -->
+<div class="md:col-span-3 space-y-3">
+<div class="text-label-caps font-label-caps text-on-surface dark:text-inverse-on-surface font-bold uppercase">Compliance &amp; Trust</div>
+<ul class="space-y-2 text-body-sm font-body-sm">
+<li><a class="text-on-surface-variant dark:text-surface-variant transition-colors duration-150 ease-in-out hover:text-primary dark:hover:text-inverse-primary" href="#">ISO 26262 Certified</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant transition-colors duration-150 ease-in-out hover:text-primary dark:hover:text-inverse-primary" href="#">IEC 62133 Compliant</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant transition-colors duration-150 ease-in-out hover:text-primary dark:hover:text-inverse-primary" href="#">UN 38.3 Verified</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant transition-colors duration-150 ease-in-out hover:text-primary dark:hover:text-inverse-primary" href="#">Environmental Impact</a></li>
+</ul>
+</div>
+<!-- Quick Links Column 3: Inquiries -->
+<div class="md:col-span-2 space-y-3">
+<div class="text-label-caps font-label-caps text-on-surface dark:text-inverse-on-surface font-bold uppercase">Partnerships</div>
+<ul class="space-y-2 text-body-sm font-body-sm">
+<li><a class="text-on-surface-variant dark:text-surface-variant transition-colors duration-150 ease-in-out hover:text-primary dark:hover:text-inverse-primary" href="#">OEM Integration</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant transition-colors duration-150 ease-in-out hover:text-primary dark:hover:text-inverse-primary" href="#">Swapping Kiosk Franchises</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant transition-colors duration-150 ease-in-out hover:text-primary dark:hover:text-inverse-primary" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<!-- Copyright & Legal (Shared component labels) -->
+<div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-body-sm font-body-sm text-on-surface-variant dark:text-surface-variant">
+<div>
+          © 2025 AxiWatt Systems Inc. Certified High-Reliability Clean Energy Storage. All rights reserved.
+        </div>
+<div class="flex items-center space-x-6 text-label-caps font-label-caps">
+<a class="hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">ISO 26262 Certified</a>
+<a class="hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">IEC 62133 Compliant</a>
+<a class="hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">UN 38.3 Verified</a>
+<a class="hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">Environmental Impact</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Light interactive script for the Live Telemetry Simulation widget -->
+<script>
+    function setMode(mode) {
+      const btnDrive = document.getElementById('mode-drive');
+      const btnRegen = document.getElementById('mode-regen');
+      const btnSwap = document.getElementById('mode-swap');
+      const packStatus = document.getElementById('pack-status');
+      const packPct = document.getElementById('pack-pct');
+      const gaugeBar = document.getElementById('gauge-bar');
+      const flowLabel = document.getElementById('flow-label');
+      const flowTemp = document.getElementById('flow-temp');
+      const flowEff = document.getElementById('flow-eff');
+      const motorBadge = document.getElementById('motor-badge');
+      const speedIndicator = document.getElementById('speed-indicator');
+
+      // Reset base buttons
+      [btnDrive, btnRegen, btnSwap].forEach(b => {
+        b.className = "px-5 py-2.5 rounded-lg text-label-md font-label-md font-semibold transition-all duration-150 text-on-surface-variant hover:text-on-surface";
+      });
+
+      if (mode === 'drive') {
+        btnDrive.className = "px-5 py-2.5 rounded-lg text-label-md font-label-md font-semibold transition-all duration-150 bg-surface-container-lowest text-on-surface shadow-sm";
+        packStatus.innerText = "Delivering 48V";
+        packStatus.className = "px-2.5 py-1 rounded-full text-label-md font-label-md bg-[#ecfdf5] text-primary font-medium";
+        packPct.innerText = "94%";
+        gaugeBar.style.width = "94%";
+        flowLabel.innerText = "Discharging • 4.2 kW";
+        flowTemp.innerText = "29.4°C";
+        flowEff.innerText = "98.2%";
+        motorBadge.innerText = "Torque Vectoring";
+        speedIndicator.innerText = "48 km/h";
+      } else if (mode === 'regen') {
+        btnRegen.className = "px-5 py-2.5 rounded-lg text-label-md font-label-md font-semibold transition-all duration-150 bg-surface-container-lowest text-on-surface shadow-sm";
+        packStatus.innerText = "Reclaiming Power";
+        packStatus.className = "px-2.5 py-1 rounded-full text-label-md font-label-md bg-secondary-container text-on-secondary-container font-medium";
+        packPct.innerText = "96%";
+        gaugeBar.style.width = "96%";
+        flowLabel.innerText = "Recharging • +1.8 kW Kinetic";
+        flowTemp.innerText = "27.1°C";
+        flowEff.innerText = "99.1%";
+        motorBadge.innerText = "Regen Braking Active";
+        speedIndicator.innerText = "22 km/h (Decel)";
+      } else if (mode === 'swap') {
+        btnSwap.className = "px-5 py-2.5 rounded-lg text-label-md font-label-md font-semibold transition-all duration-150 bg-surface-container-lowest text-on-surface shadow-sm";
+        packStatus.innerText = "Docked Kiosk Slot 04";
+        packStatus.className = "px-2.5 py-1 rounded-full text-label-md font-label-md bg-[#ecfdf5] text-primary font-medium";
+        packPct.innerText = "100%";
+        gaugeBar.style.width = "100%";
+        flowLabel.innerText = "High-Rate Direct DC • 12 kW";
+        flowTemp.innerText = "25.0°C (Active Chill)";
+        flowEff.innerText = "99.8%";
+        motorBadge.innerText = "Standby Ready";
+        speedIndicator.innerText = "0 km/h (Docked)";
+      }
+    }
+  </script>
+</body></html>
